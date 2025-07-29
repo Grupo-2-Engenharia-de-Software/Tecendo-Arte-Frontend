@@ -1,0 +1,9 @@
+.github
+.husky
+.tests
+coverage
+package-lock.json
+public
+node_modules
+angular.json
+jest.config.ts
