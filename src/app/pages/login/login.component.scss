@@ -1,0 +1,103 @@
+.login-container {
+  display: flex;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.image-side {
+  flex: 1;
+  background-color: #f4d3cb;
+}
+
+.image-side img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.form-side {
+  flex: 1;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ffffff;
+}
+
+.logo {
+  font-family: 'Cursive', sans-serif;
+  font-size: 2rem;
+  color: #5e3b31;
+  margin-bottom: 0.5rem;
+}
+
+.logo span {
+  font-style: italic;
+}
+
+h2 {
+  color: #a34364;
+  margin-bottom: 2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+input[type="email"],
+input[type="password"] {
+  padding: 0.75rem;
+  margin-top: 0.25rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.remember input {
+  margin-right: 0.5rem;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.login-btn,
+.register-btn {
+  flex: 1;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.login-btn {
+  background-color: #e3b8c2;
+  color: white;
+}
+
+.register-btn {
+  background-color: #d9a6b6;
+  color: white;
+}
+
+.forgot-password {
+  text-align: center;
+  margin-top: 0.5rem;
+  color: #666;
+  font-size: 0.9rem;
+}
