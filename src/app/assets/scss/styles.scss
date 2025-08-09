@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'Yusei Magic';
+  src: url('../fonts/yusei-magic/YuseiMagic-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sail';
+  src: url('../fonts/sail/Sail-Regular.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Yusei Magic', sans-serif; 
+}
+
+
