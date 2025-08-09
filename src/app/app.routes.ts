@@ -3,8 +3,7 @@ import { HomeComponent } from './pages/home/home.component';
 
 export const routes: Routes = [
     { 
-    path: 'home',
+    path: '',
     component: HomeComponent,
-    title: 'Página Inicial' // Título da página (opcional)
   },
 ];
