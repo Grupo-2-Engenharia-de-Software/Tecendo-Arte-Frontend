@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Sail&family=Yusei+Magic&display=swap');
+
+.login-container {
+  display: flex;
+  height: 100vh;
+  font-family: 'Yusei Magic', sans-serif;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: auto;
+  }
+}
+
+.login-image {
+  flex: 1;
+  height: 100%;
+  background-color: #e8c9cd;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.login-form .logo,
+.login-form .welcome {
+  text-align: center;
+}
+
+.login-form {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fff;
+
+  .logo {
+    font-family: 'Sail', cursive;
+    font-size: 50px;
+    color: #674422;
+    font-weight: 400;
+    margin-bottom: 10px;
+
+    span {
+      display: block;
+    }
+  }
+
+  .welcome {
+    color: #945261;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  label {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    margin-top: 15px;
+    color: #171712;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #f1ebe4;
+    border-radius: 6px;
+    background-color: #FBF9F9;
+    font-family: 'Yusei Magic', sans-serif;
+
+    &::placeholder {
+      color: #8b6954;
+    }
+
+    &:focus {
+      border-color: #e8c9cd;
+      outline: none;
+    }
+  }
+
+ .remember {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  label {
+    position: relative;
+    cursor: pointer;
+    padding-left: 28px;
+    color: #555;
+    font-size: 16px;
+    line-height: 20px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 20px;
+      height: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background-color: #fff;
+      transition: all 0.2s ease;
+    }
+  }
+
+  input[type="checkbox"]:checked + label {
+    &::before {
+      background-color: #945261;
+      border-color: #945261;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 6px;
+      top: 2px;
+      width: 6px;
+      height: 12px;
+      border: solid white;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+  }
+
+  label:hover::before {
+    border-color: #945261;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+  }
+}
+
+  .buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+
+    button {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-family: 'Yusei Magic', sans-serif;
+      font-size: 1rem;
+    }
+
+    .btn-login,
+    .btn-create {
+      background-color: #e8c9cd;
+      color: #fff;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #e5b3b8;
+      }
+    }
+  }
+
+  .forgot {
+    display: block;
+    margin-top: 20px;
+    font-size: 0.85rem;
+    color: #8b6954;
+    text-align: center;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
