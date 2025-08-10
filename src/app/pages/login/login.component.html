@@ -1,29 +1,32 @@
 <div class="login-container">
-  <div class="image-side">
-    <img src="assets/image/login.png" alt="Arte ilustrada de mulher com pincel" />
+  <!-- Lado esquerdo - imagem -->
+  <div class="login-image">
+    <img src="assets/login.png" alt="Arte de login">
   </div>
-  <div class="form-side">
+
+  <!-- Lado direito - formulário -->
+  <div class="login-form">
     <h1 class="logo">Tecendo <span>Arte</span></h1>
-    <h2>Bem vindo(a)!</h2>
+    <h2 class="welcome">Bem vindo(a)!</h2>
 
     <form>
-      <label for="email">Nome de usuário ou e-mail</label>
-      <input id="email" type="email" placeholder="Digite seu nome de usuário ou e-mail" />
+      <label for="username">Nome de usuário ou e-mail</label>
+      <input id="username" type="text" placeholder="Digite seu nome de usuário ou e-mail">
 
-      <label for="senha">Senha</label>
-      <input id="senha" type="password" placeholder="Digite sua senha" />
+      <label for="password">Senha</label>
+      <input id="password" type="password" placeholder="Digite sua senha">
 
       <div class="remember">
-        <input id="lembrar" type="checkbox" />
-        <label for="lembrar">Lembrar de mim</label>
+        <input type="checkbox" id="remember">
+        <label for="remember">Lembrar de mim</label>
       </div>
 
       <div class="buttons">
-        <button class="login-btn" type="submit">Login</button>
-        <button class="register-btn" type="button">Criar conta</button>
+        <button type="submit" class="btn-login">Login</button>
+        <button type="button" class="btn-create">Criar conta!</button>
       </div>
 
-      <a class="forgot-password" href="#">Esqueceu a senha?</a>
+      <a href="#" class="forgot">Esqueceu a senha?</a>
     </form>
   </div>
 </div>

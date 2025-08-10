@@ -1,103 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Sail&family=Yusei+Magic&display=swap');
+
 .login-container {
   display: flex;
   height: 100vh;
-  font-family: Arial, sans-serif;
+  font-family: 'Yusei Magic', sans-serif;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: auto;
+  }
 }
 
-.image-side {
+.login-image {
   flex: 1;
-  background-color: #f4d3cb;
-}
-
-.image-side img {
-  width: 100%;
   height: 100%;
-  object-fit: cover;
+  background-color: #e8c9cd;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
-.form-side {
+.login-form .logo,
+.login-form .welcome {
+  text-align: center;
+}
+
+.login-form {
   flex: 1;
-  padding: 3rem;
+  padding: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #ffffff;
-}
+  background-color: #fff;
 
-.logo {
-  font-family: 'Cursive', sans-serif;
-  font-size: 2rem;
-  color: #5e3b31;
-  margin-bottom: 0.5rem;
-}
+  .logo {
+    font-family: 'Sail', cursive;
+    font-size: 50px;
+    color: #674422;
+    font-weight: 400;
+    margin-bottom: 10px;
 
-.logo span {
-  font-style: italic;
-}
+    span {
+      display: block;
+    }
+  }
 
-h2 {
-  color: #a34364;
-  margin-bottom: 2rem;
-}
+  .welcome {
+    color: #945261;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
 
-form {
-  display: flex;
-  flex-direction: column;
-}
+  label {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    margin-top: 15px;
+    color: #171712;
+  }
 
-label {
-  margin-top: 1rem;
-  font-weight: 600;
-  color: #333;
-}
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #f1ebe4;
+    border-radius: 6px;
+    background-color: #FBF9F9;
+    font-family: 'Yusei Magic', sans-serif;
 
-input[type="email"],
-input[type="password"] {
-  padding: 0.75rem;
-  margin-top: 0.25rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
+    &::placeholder {
+      color: #8b6954;
+    }
 
-.remember {
+    &:focus {
+      border-color: #e8c9cd;
+      outline: none;
+    }
+  }
+
+ .remember {
   display: flex;
   align-items: center;
-  margin: 1rem 0;
+  gap: 8px;
+  margin-top: 20px;
+
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  label {
+    position: relative;
+    cursor: pointer;
+    padding-left: 28px;
+    color: #555;
+    font-size: 16px;
+    line-height: 20px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 20px;
+      height: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background-color: #fff;
+      transition: all 0.2s ease;
+    }
+  }
+
+  input[type="checkbox"]:checked + label {
+    &::before {
+      background-color: #945261;
+      border-color: #945261;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 6px;
+      top: 2px;
+      width: 6px;
+      height: 12px;
+      border: solid white;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+  }
+
+  label:hover::before {
+    border-color: #945261;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+  }
 }
 
-.remember input {
-  margin-right: 0.5rem;
-}
+  .buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
 
-.buttons {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 1rem;
-}
+    button {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-family: 'Yusei Magic', sans-serif;
+      font-size: 1rem;
+    }
 
-.login-btn,
-.register-btn {
-  flex: 1;
-  padding: 0.75rem;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
-}
+    .btn-login,
+    .btn-create {
+      background-color: #e8c9cd;
+      color: #fff;
+      transition: background-color 0.3s ease;
 
-.login-btn {
-  background-color: #e3b8c2;
-  color: white;
-}
+      &:hover {
+        background-color: #e5b3b8;
+      }
+    }
+  }
 
-.register-btn {
-  background-color: #d9a6b6;
-  color: white;
-}
+  .forgot {
+    display: block;
+    margin-top: 20px;
+    font-size: 0.85rem;
+    color: #8b6954;
+    text-align: center;
+    text-decoration: none;
 
-.forgot-password {
-  text-align: center;
-  margin-top: 0.5rem;
-  color: #666;
-  font-size: 0.9rem;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }

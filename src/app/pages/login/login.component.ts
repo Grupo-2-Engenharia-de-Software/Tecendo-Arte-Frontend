@@ -2,10 +2,17 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-login',
-  imports: [],
   templateUrl: './login.component.html',
-  styleUrl: './login.component.scss'
+  styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
+  username = '';
+  password = '';
+  rememberMe = false;
 
+  login() {
+    console.log('Usuário:', this.username);
+    console.log('Senha:', this.password);
+    console.log('Lembrar:', this.rememberMe);
+  }
 }
