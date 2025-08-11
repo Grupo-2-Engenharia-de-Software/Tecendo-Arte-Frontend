@@ -1,11 +1,6 @@
 @use 'sass:color';
 @use '../../assets/scss/colors' as c;
 
-@font-face {
-    font-family: 'Jakarta Sans';
-    src: url('/assets/fonts/Plus_Jakarta_Sans/PlusJakartaSans-VariableFont_wght.ttf');
-}
-
 .cadastroTela {
     display: flex;
 }
@@ -69,6 +64,7 @@
         &::placeholder {
             color: c.$brown-2;
             opacity: 1;
+            font-family: 'Jakarta Sans';
         }
 
         &:focus {
