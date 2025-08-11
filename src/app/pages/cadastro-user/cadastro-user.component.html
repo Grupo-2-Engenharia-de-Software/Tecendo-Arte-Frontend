@@ -1,23 +1,36 @@
 
 <div class="cadastroTela">
-    <img class="cadastroImage" src="assets/cadastro-user.png" alt="cadastro de usuário">
+    <div >
+        <img class="cadastroImage" src="assets/cadastro-user.png" alt="cadastro de usuário">
+    </div>
     
     <div class="cadastroForm">
         <h2 class="projetoTitulo">Tecendo <br> Arte</h2>
         <h3 class="cadastroTitulo">Crie sua conta</h3>
 
         <div class="cadastroCampos">
-            <p>Nome</p>
+            <label for="userNome">Nome</label>
             <input id="userNome" type="text" placeholder="Digite seu nome">
+        </div>
 
-            <p>E-mail</p>
+        <div class="cadastroCampos">
+            <label for="userEmail">E-mail</label>
             <input id="userEmail" type="text" placeholder="Digite seu e-mail">
+        </div>
 
-            <p>Senha</p>
+        <div class="cadastroCampos">
+            <label for="userSenha">Senha</label>
             <input id="userSenha" type="password" placeholder="Digite sua senha">
+        </div>
 
-            <p>Confirmar senha</p>
-            <input id="userConfirmaSenha" type="text" placeholder="Confirme sua senha">
+        <div class="cadastroCampos">
+            <label for="userConfirmaSenha">Confirmar senha</label>
+            <input id="userConfirmaSenha" type="password" placeholder="Confirme sua senha">
+        </div>
+
+        <div class="botoesForm">
+            <button>Cadastrar</button>
+            <button>Já tenho conta!</button>
         </div>
     </div>
 </div>

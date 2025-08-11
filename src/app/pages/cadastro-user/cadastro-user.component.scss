@@ -1,62 +1,107 @@
-@font-face {
-    font-family: 'Sail-Regular';
-    src: url('/assets/fonts/sail/Sail-Regular.ttf');
-}
+@use 'sass:color';
+@use '../../assets/scss/colors' as c;
 
 @font-face {
     font-family: 'Jakarta Sans';
     src: url('/assets/fonts/Plus_Jakarta_Sans/PlusJakartaSans-VariableFont_wght.ttf');
 }
 
-@import '../../assets/scss/colors';
-
 .cadastroTela {
     display: flex;
 }
 
 .cadastroImage {
+    display: inherit;
     width: 50vw;
     height: auto;
     max-height: 100vh;
+    object-fit: cover;
 }
 
 .cadastroForm {
     width: 50vw;
-    margin-left: 3vw;
-    margin-right: 3vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .projetoTitulo {
     text-align: center;
     font-size: 35px;
-    font-family: 'Sail-Regular';
-    color: $brown-tangelo;
+    font-family: 'Sail';
+    color: c.$brown-tangelo;
+    margin: 0;
 }
 
 .cadastroTitulo {
     text-align: center;
     font-size: 25px;
-    color: $pink-1;
+    color: c.$pink-1;
     font-family: 'Jakarta Sans';
     font-weight: bold;
 }
 
 .cadastroCampos {
-    p {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 30vw;
+    margin-bottom: 1rem;
+
+    label {
+        font-size: 0.875rem;
         font-family: 'Jakarta Sans';
         font-weight: normal;
+        font-weight: 600;
+        color: #171712;
+        margin-bottom: 0.5rem;
     }
 
     input {
         width: 100%;
-        border: 1px solid $pink-2;
+        border: 1px solid c.$pink-2;
         border-radius: 6px;
-        background-color: $snow;
-        padding: 10px 15px;
+        background-color: c.$snow;
+        padding: 12px 15px;
+        font-size: 16px;
 
         &::placeholder {
-            color: $brown-2;
+            color: c.$brown-2;
             opacity: 1;
+        }
+
+        &:focus {
+            outline: none;
+            border-color: color.adjust(c.$pink-2, $lightness: -10%);
+            box-shadow: 0 0 4px rgb(0, 0, 0, 0.1);
+        }
+    }
+}
+
+.botoesForm {
+    display: flex;
+    gap: 1rem;
+
+    button {
+        background-color: c.$pink-3;
+        border: none;
+        border-radius: 6px;
+        padding: 10px 38px;
+        color: white;
+        font-family: 'Jakarta Sans';
+        font-size: 14px;
+        font-weight: bold;
+        cursor: pointer;
+        text-align: center;
+        transition: transform 0.2s ease, background-color 0.2s ease;
+
+        &:hover {
+           transform: translateY(-2px);
+        }
+
+        &:active {
+            transform: translateY(0);
         }
     }
 }
