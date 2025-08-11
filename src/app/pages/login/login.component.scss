@@ -1,3 +1,4 @@
+@use 'app/assets/scss/variables' as vars;
 @import url('https://fonts.googleapis.com/css2?family=Sail&family=Yusei+Magic&display=swap');
 
 .login-container {
@@ -14,7 +15,7 @@
 .login-image {
   flex: 1;
   height: 100%;
-  background-color: #e8c9cd;
+  background-color: vars.$pink-3;
 
   img {
     width: 100%;
@@ -39,7 +40,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #fff;
+  background-color: vars.$white;
 
   .logo {
     font-family: 'Sail', cursive;
@@ -54,7 +55,7 @@
   }
 
   .welcome {
-    color: #945261;
+    color: vars.$pink-1;
     font-weight: bold;
     margin-bottom: 20px;
   }
@@ -81,7 +82,7 @@
     }
 
     &:focus {
-      border-color: #e8c9cd;
+      border-color: vars.$pink-3;
       outline: none;
     }
   }
@@ -113,15 +114,15 @@
       height: 20px;
       border: 1px solid #ccc;
       border-radius: 4px;
-      background-color: #fff;
+      background-color: vars.$white;
       transition: all 0.2s ease;
     }
   }
 
   input[type="checkbox"]:checked + label {
     &::before {
-      background-color: #945261;
-      border-color: #945261;
+      background-color: vars.$pink-1;
+      border-color: vars.$pink-1;
     }
 
     &::after {
@@ -138,7 +139,7 @@
   }
 
   label:hover::before {
-    border-color: #945261;
+    border-color: vars.$pink-1;
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
   }
 }
@@ -160,8 +161,8 @@
 
     .btn-login,
     .btn-create {
-      background-color: #e8c9cd;
-      color: #fff;
+      background-color: vars.$pink-3;
+      color: vars.$white;
       transition: background-color 0.3s ease;
 
       &:hover {

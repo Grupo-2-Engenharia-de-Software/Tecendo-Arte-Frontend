@@ -40,6 +40,11 @@
             "outputMode": "server",
             "ssr": {
               "entry": "src/server.ts"
+            },
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src"
+              ]
             }
           },
           "configurations": {
