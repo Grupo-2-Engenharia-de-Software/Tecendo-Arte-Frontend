@@ -1,3 +1,15 @@
+@font-face {
+    font-family: 'Sail-Regular';
+    src: url('/assets/fonts/sail/Sail-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Jakarta Sans';
+    src: url('/assets/fonts/Plus_Jakarta_Sans/PlusJakartaSans-VariableFont_wght.ttf');
+}
+
+@import '../../assets/scss/colors';
+
 .cadastroTela {
     display: flex;
 }
@@ -14,6 +26,37 @@
     margin-right: 3vw;
 }
 
+.projetoTitulo {
+    text-align: center;
+    font-size: 35px;
+    font-family: 'Sail-Regular';
+    color: $brown-tangelo;
+}
+
 .cadastroTitulo {
     text-align: center;
+    font-size: 25px;
+    color: $pink-1;
+    font-family: 'Jakarta Sans';
+    font-weight: bold;
+}
+
+.cadastroCampos {
+    p {
+        font-family: 'Jakarta Sans';
+        font-weight: normal;
+    }
+
+    input {
+        width: 100%;
+        border: 1px solid $pink-2;
+        border-radius: 6px;
+        background-color: $snow;
+        padding: 10px 15px;
+
+        &::placeholder {
+            color: $brown-2;
+            opacity: 1;
+        }
+    }
 }
