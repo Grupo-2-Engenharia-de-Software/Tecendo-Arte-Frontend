@@ -26,10 +26,13 @@
 
             <div class="cadastroCampos">
                 <label for="userConfirmaSenha">Confirmar senha</label>
-                <input id="userConfirmaSenha" type="password" placeholder="Confirme sua senha" formControlName="userConfirmaSenha">
+                <input id="userConfirmaSenha" type="password" [class.erroCampo]="formCadastro.controls['userConfirmaSenha'].errors?.['mustMatch']" placeholder="Confirme sua senha" formControlName="userConfirmaSenha">
                 
-                @if (formCadastro.controls['userConfirmaSenha'].touched && formCadastro.controls['userConfirmaSenha'].errors?.['mustMatch']) {
-                    <div>
+                @if (
+                        formCadastro.controls['userConfirmaSenha'].dirty && 
+                        formCadastro.controls['userConfirmaSenha'].errors?.['mustMatch']
+                    ) {
+                    <div class="erroMsg">
                         As senhas não coincidem
                     </div>
                 }
@@ -37,7 +40,7 @@
 
             <div class="botoesForm">
                 <button>Cadastrar</button>
-                <button onclick="irParaLogin()">Já tenho conta!</button>
+                <button (click)="irParaLogin()">Já tenho conta!</button>
             </div>
         </form>
     </div>
