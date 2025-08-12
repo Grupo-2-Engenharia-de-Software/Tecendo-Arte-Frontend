@@ -29,11 +29,13 @@
               "src/assets",
               {
                 "glob": "**/*",
-                "input": "public"
+                "input": "src/app/assets",
+                "output": "assets"
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/app/assets/scss/colors.scss",
+              "src/app/assets/scss/styles.scss"
             ],
             "scripts": [],
             "server": "src/main.server.ts",
@@ -103,7 +105,7 @@
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/app/assets/scss/styles.scss"
             ],
             "scripts": []
           }

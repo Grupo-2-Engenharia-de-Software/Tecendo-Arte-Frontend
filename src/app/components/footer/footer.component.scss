@@ -1,0 +1,7 @@
+@use '../../assets/scss/colors.scss' as colors;
+
+.container{
+    width: 100%;
+    height: 10vh;
+    background-color:colors.$pink-1
+}
