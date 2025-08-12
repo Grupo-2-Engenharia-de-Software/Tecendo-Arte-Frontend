@@ -40,8 +40,6 @@
 .cadastroCampos {
     display: flex;
     flex-direction: column;
-    width: 80%;
-    max-width: 30vw;
     margin-bottom: 1rem;
 
     label {
@@ -54,7 +52,6 @@
     }
 
     input {
-        width: 100%;
         border: 1px solid c.$pink-2;
         border-radius: 6px;
         background-color: c.$snow;
@@ -75,8 +72,24 @@
     }
 }
 
+.erroCampo {
+    border-color: red;
+    box-shadow: 0 0 4px red;
+}
+
+.cadastroCampos input.erroCampo:focus {
+    border-color: red;
+    box-shadow: 0 0 4px red;
+}
+
+.erroMsg {
+    color: red;
+}
+
 .botoesForm {
     display: flex;
+    justify-content: space-between;
+    width: 30vw;
     gap: 1rem;
 
     button {
