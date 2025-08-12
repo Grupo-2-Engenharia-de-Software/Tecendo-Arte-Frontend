@@ -1,10 +1,9 @@
-@use 'app/assets/scss/variables' as vars;
-@import url('https://fonts.googleapis.com/css2?family=Sail&family=Yusei+Magic&display=swap');
+@import '../../assets/scss/colors.scss';
+
 
 .login-container {
   display: flex;
   height: 100vh;
-  font-family: 'Yusei Magic', sans-serif;
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -15,7 +14,7 @@
 .login-image {
   flex: 1;
   height: 100%;
-  background-color: vars.$pink-3;
+  background-color: $pink-3;
 
   img {
     width: 100%;
@@ -36,16 +35,16 @@
 
 .login-form {
   flex: 1;
-  padding: 40px;
+  padding: 2.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: vars.$white;
+  background-color: $white;
 
   .logo {
     font-family: 'Sail', cursive;
-    font-size: 50px;
-    color: #674422;
+    font-size: 2.82rem;
+    color: $brown-1;
     font-weight: 400;
     margin-bottom: 10px;
 
@@ -55,34 +54,35 @@
   }
 
   .welcome {
-    color: vars.$pink-1;
+    color: $pink-1;
+    font-size: 1.75rem;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 1.75rem;
   }
 
   label {
     display: block;
-    font-size: 0.9rem;
-    margin-bottom: 5px;
-    margin-top: 15px;
-    color: #171712;
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+    margin-top: 1rem;
   }
 
   input[type="text"],
   input[type="password"] {
     width: 100%;
-    padding: 12px;
-    border: 1px solid #f1ebe4;
-    border-radius: 6px;
-    background-color: #FBF9F9;
+    padding: 0.75rem;
+    border: 1px solid $pink-2;
+    border-radius: 0.38rem;
+    background-color: $gray-3;
     font-family: 'Yusei Magic', sans-serif;
 
     &::placeholder {
-      color: #8b6954;
+      color: $brown-2;
+      font-size: 1rem;
     }
 
     &:focus {
-      border-color: vars.$pink-3;
+      border-color: $pink-3;
       outline: none;
     }
   }
@@ -90,8 +90,8 @@
  .remember {
   display: flex;
   align-items: center;
-  gap: 8px;
-  margin-top: 20px;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
 
   input[type="checkbox"] {
     display: none;
@@ -100,60 +100,58 @@
   label {
     position: relative;
     cursor: pointer;
-    padding-left: 28px;
-    color: #555;
-    font-size: 16px;
-    line-height: 20px;
+    padding-left: 1.75rem;
+    font-size: 1rem;
+    line-height: 1.25rem;
 
     &::before {
       content: '';
       position: absolute;
       left: 0;
       top: 0;
-      width: 20px;
-      height: 20px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      background-color: vars.$white;
+      width: 1.25rem;
+      height: 1.25rem;
+      border: 1px solid $pink-1;
+      border-radius: 0.25rem;
+      background-color: $white;
       transition: all 0.2s ease;
     }
   }
 
   input[type="checkbox"]:checked + label {
     &::before {
-      background-color: vars.$pink-1;
-      border-color: vars.$pink-1;
+      background-color: $pink-1;
+      border-color: $pink-1;
     }
 
     &::after {
       content: '';
       position: absolute;
-      left: 6px;
-      top: 2px;
-      width: 6px;
-      height: 12px;
-      border: solid white;
-      border-width: 0 2px 2px 0;
+      left: 0.375rem;
+      top: 0.125rem;
+      width: 0.375rem;
+      height: 0.75rem;
+      border: solid $white;
+      border-width: 0 0.125rem 0.125rem 0;
       transform: rotate(45deg);
     }
   }
 
   label:hover::before {
-    border-color: vars.$pink-1;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+    border-color: $pink-1;
   }
 }
 
   .buttons {
     display: flex;
     gap: 10px;
-    margin-top: 15px;
+    margin-top: 1rem;
 
     button {
       flex: 1;
-      padding: 10px;
+      padding: 0.62rem;
       border: none;
-      border-radius: 6px;
+      border-radius: 0.38rem;
       cursor: pointer;
       font-family: 'Yusei Magic', sans-serif;
       font-size: 1rem;
@@ -161,21 +159,21 @@
 
     .btn-login,
     .btn-create {
-      background-color: vars.$pink-3;
-      color: vars.$white;
+      background-color: $pink-3;
+      color: $white;
       transition: background-color 0.3s ease;
 
       &:hover {
-        background-color: #e5b3b8;
+        background-color: $pink-4;
       }
     }
   }
 
   .forgot {
     display: block;
-    margin-top: 20px;
+    margin-top: 1.25rem;
     font-size: 0.85rem;
-    color: #8b6954;
+    color: $brown-1;
     text-align: center;
     text-decoration: none;
 
