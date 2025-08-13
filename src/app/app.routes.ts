@@ -8,7 +8,7 @@ export const routes: Routes = [
     component: HomeComponent,
   },
   { 
-    path: 'forget-password',
+    path: 'forgot-password',
     component: ForgotPasswordComponent,
     title: 'Recuperar senha'
   },
