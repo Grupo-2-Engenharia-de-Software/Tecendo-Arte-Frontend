@@ -8,10 +8,10 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     ReactiveFormsModule
   ],
-  templateUrl: './cadastro-user.component.html',
-  styleUrl: './cadastro-user.component.scss'
+  templateUrl: './signup-user.component.html',
+  styleUrl: './signup-user.component.scss'
 })
-export class CadastroUserComponent implements OnInit {
+export class SignupUserComponent implements OnInit {
   formCadastro!: FormGroup;
 
   constructor(
