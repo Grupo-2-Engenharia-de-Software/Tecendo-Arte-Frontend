@@ -24,7 +24,9 @@
 .projetoTitulo {
     text-align: center;
     font-size: 35px;
-    font-family: 'Sail';
+    font-family: 'Sail', cursive;
+    font-weight: 400;
+    line-height: 0.8;
     color: c.$brown-tangelo;
     margin: 0;
 }
@@ -33,7 +35,7 @@
     text-align: center;
     font-size: 25px;
     color: c.$pink-1;
-    font-family: 'Jakarta Sans';
+    font-family: 'Yusei Magic';
     font-weight: bold;
 }
 
@@ -44,7 +46,7 @@
 
     label {
         font-size: 0.875rem;
-        font-family: 'Jakarta Sans';
+        font-family: 'Yusei Magic';
         font-weight: normal;
         font-weight: 600;
         color: #171712;
@@ -61,7 +63,7 @@
         &::placeholder {
             color: c.$brown-2;
             opacity: 1;
-            font-family: 'Jakarta Sans';
+            font-family: 'Yusei Magic';
         }
 
         &:focus {
@@ -98,7 +100,7 @@
         border-radius: 6px;
         padding: 10px 38px;
         color: white;
-        font-family: 'Jakarta Sans';
+        font-family: 'Yusei Magic';
         font-size: 14px;
         font-weight: bold;
         cursor: pointer;
