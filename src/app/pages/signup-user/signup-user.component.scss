@@ -29,7 +29,7 @@
     justify-content: center;
     align-items: center;
 
-    width: 500px;
+    width: 45rem;
 }
 
 .projetoTitulo {
@@ -38,7 +38,7 @@
     font-family: 'Sail', cursive;
     font-weight: 400;
     line-height: 0.8;
-    color: c.$brown-tangelo;
+    color: c.$brown-1;
     margin-bottom: 0;
 }
 
@@ -57,18 +57,18 @@
     margin-bottom: 1.3rem;
 
     label {
-        font-size: 0.875rem;
+        font-size: 1rem;
         font-family: 'Yusei Magic';
         font-weight: normal;
         font-weight: 500;
-        color: #171712;
+        color: c.$black-1;
         margin-bottom: 0.5rem;
     }
 
     input {
         border: 1px solid c.$pink-2;
         border-radius: 6px;
-        background-color: c.$snow;
+        background-color: c.$white-1;
         padding: 12px 15px;
         font-size: 16px;
 
@@ -108,10 +108,10 @@
     gap: 1rem;
 
     button {
-        background-color: c.$pink-3;
+        background-color:c.$pink-4;
         border: none;
         border-radius: 6px;
-        padding: 10px 38px;
+        padding: 10px 60px;
         color: white;
         font-family: 'Yusei Magic';
         font-size: 14px;
@@ -122,6 +122,7 @@
 
         &:hover {
            transform: translateY(-2px);
+           background-color:c.$pink-1;
         }
 
         &:active {
