@@ -5,30 +5,41 @@
     display: flex;
 }
 
+.imageSide {
+    width: 50vw;
+    max-height: 100vh;
+}
+
 .cadastroImage {
     display: inherit;
-    width: 50vw;
-    height: auto;
-    max-height: 100vh;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
-.cadastroForm {
+.formSide {
     width: 50vw;
+    display: flex;
+    justify-content: center;
+}
+
+.cadastroForm {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    width: 500px;
 }
 
 .projetoTitulo {
     text-align: center;
-    font-size: 35px;
+    font-size: 42px;
     font-family: 'Sail', cursive;
     font-weight: 400;
     line-height: 0.8;
     color: c.$brown-tangelo;
-    margin: 0;
+    margin-bottom: 0;
 }
 
 .cadastroTitulo {
@@ -42,13 +53,14 @@
 .cadastroCampos {
     display: flex;
     flex-direction: column;
-    margin-bottom: 1rem;
+    width: 100%;
+    margin-bottom: 1.3rem;
 
     label {
         font-size: 0.875rem;
         font-family: 'Yusei Magic';
         font-weight: normal;
-        font-weight: 600;
+        font-weight: 500;
         color: #171712;
         margin-bottom: 0.5rem;
     }
@@ -90,8 +102,9 @@
 
 .botoesForm {
     display: flex;
-    justify-content: space-between;
-    width: 30vw;
+    justify-content: center;
+    width: 100%;
+    margin-top: 5px;
     gap: 1rem;
 
     button {
