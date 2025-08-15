@@ -12,7 +12,7 @@
 }
 
 .login-image {
-  flex: 1;
+  flex: 1.3;
   height: 100%;
   background-color: $pink-3;
 
@@ -42,15 +42,12 @@
   background-color: $white;
 
   .logo {
+    line-height: 0.8;
     font-family: 'Sail', cursive;
     font-size: 2.82rem;
     color: $brown-1;
     font-weight: 400;
     margin-bottom: 10px;
-
-    span {
-      display: block;
-    }
   }
 
   .welcome {
@@ -69,7 +66,7 @@
 
   input[type="text"],
   input[type="password"] {
-    width: 100%;
+    width: 95%;
     padding: 0.75rem;
     border: 1px solid $pink-2;
     border-radius: 0.38rem;
@@ -144,12 +141,14 @@
 
   .buttons {
     display: flex;
-    gap: 10px;
+    width: 95%;
+    margin: 0 auto;
+    gap: 2.75rem;
     margin-top: 1rem;
 
     button {
-      flex: 1;
-      padding: 0.62rem;
+      flex-basis: 50%;
+      height: 2.5rem;
       border: none;
       border-radius: 0.38rem;
       cursor: pointer;
@@ -164,7 +163,7 @@
       transition: background-color 0.3s ease;
 
       &:hover {
-        background-color: $pink-4;
+        background-color: $pink-1;
       }
     }
   }
