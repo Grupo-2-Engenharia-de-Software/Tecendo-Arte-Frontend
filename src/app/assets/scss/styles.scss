@@ -1,3 +1,5 @@
+@use 'ngx-toastr/toastr';
+
 @font-face {
   font-family: 'Yusei Magic';
   src: url('../fonts/yusei-magic/YuseiMagic-Regular.ttf') format('truetype');
@@ -20,5 +22,3 @@ html, body {
   height: 100%;
   font-family: 'Yusei Magic', sans-serif; 
 }
-
-
