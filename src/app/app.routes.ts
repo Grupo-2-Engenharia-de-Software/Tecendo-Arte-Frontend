@@ -11,7 +11,6 @@ export const routes: Routes = [
   { 
     path: 'forgot-password',
     component: ForgotPasswordComponent,
-    title: 'Recuperar senha'
   },
   {
     path: 'signup',

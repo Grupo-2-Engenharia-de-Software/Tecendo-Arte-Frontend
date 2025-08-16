@@ -38,7 +38,7 @@ export class ForgotPasswordFormComponent {
     } else {
       setTimeout(() => {
         this.toastr.success(
-          'Um link de recuperação será enviado se estiver cadastrado',
+          'Um link de recuperação será ao seu e-mail',
           '',
           {
             positionClass: 'toast-top-center',
