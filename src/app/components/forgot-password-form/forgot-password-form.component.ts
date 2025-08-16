@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { NgIf } from '@angular/common';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-forgot-password-form',
@@ -13,7 +14,7 @@ export class ForgotPasswordFormComponent {
 
   emailForm!: FormGroup
 
-  constructor() {
+  constructor(private toastr: ToastrService) {
   }
   
   submitted = false;
@@ -30,10 +31,23 @@ export class ForgotPasswordFormComponent {
 
   submit() {
     this.submitted = true;
+    this.emailForm.markAllAsTouched();
 
     if(this.emailForm.invalid){
       return
+    } else {
+      setTimeout(() => {
+        this.toastr.success(
+          'Um link de recuperação será enviado se estiver cadastrado',
+          '',
+          {
+            positionClass: 'toast-top-center',
+            timeOut: 2000,
+          }
+        );
+      });
+      this.emailForm.reset();
+      this.submitted = false;
     }
-    console.log("enviou o formulario")
   }
 }
