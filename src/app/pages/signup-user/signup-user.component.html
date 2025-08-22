@@ -5,7 +5,7 @@
     </div>
     
     <div class="formSide">
-        <form class="cadastroForm" [formGroup]="formCadastro">
+        <form class="cadastroForm" (ngSubmit)="submit()" [formGroup]="formCadastro">
             <h2 class="projetoTitulo">Tecendo <br> Arte</h2>
             <h3 class="cadastroTitulo">Crie sua conta</h3>
 
@@ -39,7 +39,7 @@
             </div>
 
             <div class="botoesForm">
-                <button>Cadastrar</button>
+                <button type="submit">Cadastrar</button>
                 <button (click)="irParaLogin()">Já tenho conta!</button>
             </div>
         </form>

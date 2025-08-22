@@ -57,4 +57,8 @@ export class SignupUserComponent implements OnInit {
   irParaLogin(): void {
     this.router.navigate(['/login']);
   }
+
+  submit() {
+    console.log(this.formCadastro.get('userEmail')?.value)
+  }
 }
