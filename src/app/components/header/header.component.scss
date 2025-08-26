@@ -1,0 +1,86 @@
+@use '../../assets/scss/colors.scss' as c;
+
+.container{
+    width: 100%;
+    background-color: c.$pink-1;
+    box-sizing: border-box;
+    padding: 0 3rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;  
+
+    &.homepage{
+        background-color: transparent;
+       
+    }
+
+    #logo{
+        font-family: 'Sail', cursive;
+        font-size: 2.8rem;
+        color: c.$gray-3;
+        font-weight: 400;
+        width: 10px;
+        align-items: center;
+        justify-content: center;
+        line-height: 0.8;
+
+        &.homepage{
+            color: c.$brown-1; 
+        }
+
+    }
+
+    .content{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .content-text{
+            display: flex;
+            flex-direction: row;
+            background: none;
+            border: none;
+            font-family: 'Yusei Magic', sans-serif;
+            align-items: center;
+            color: c.$gray-3;
+            font-weight: 200;
+            font-size: 1.5rem;
+            padding: 0 1rem;
+            cursor: pointer;
+            text-decoration: none;
+
+            img{
+                width: 1.5rem;
+                margin-right: 0.5rem
+            }
+        }
+        
+    }
+
+    .btn-login{
+        color: c.$pink-1;
+        background-color: c.$gray-3;
+        border: none;
+        height: 2.5rem;
+        width: 6rem;
+        font-size: 1rem;
+        cursor: pointer;
+        border-radius: 0.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+
+        &:hover{
+            font-weight: 500;
+        }
+
+         &.homepage{
+            color: c.$brown-1;
+            background-color: c.$gray-1; 
+        }
+    }
+
+    
+}
