@@ -4,7 +4,7 @@
     background-color:c.$gray-1;
     padding: 3rem 2rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(2rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
     position: relative;
 
     .content{
@@ -21,11 +21,16 @@
             font-weight: 400;
             line-height: 0.8;
             top:0;
+
+            @media(max-width: 1369px){
+                font-size: 1.2rem;
+            }
         }
 
         .content-text {
             margin: 0.1rem 0; 
             line-height: 1.1;
+            justify-content: center;
             font-family: 'Yusei Magic', sans-serif;
             color: rgba(0,0,0,0.7)
         }
