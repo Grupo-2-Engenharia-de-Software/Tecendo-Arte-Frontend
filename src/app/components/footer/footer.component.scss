@@ -4,7 +4,7 @@
     background-color:c.$gray-1;
     padding: 3rem 2rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(2rem, 1fr));
     position: relative;
 
     .content{
@@ -20,7 +20,7 @@
             color: c.$pink-1;
             font-weight: 400;
             line-height: 0.8;
-            top:0
+            top:0;
         }
 
         .content-text {
