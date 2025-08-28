@@ -1,0 +1,40 @@
+@use '../../../assets/scss/colors.scss' as c;
+
+html, body {
+  height: 100%; /* garante altura total */
+  margin: 0;    /* remove margens padrão */
+}
+
+.background {
+  background-image: url('/assets/images/Projects.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1512 / 254;
+}
+
+.project-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+}
+
+.retangle {
+  background-color: c.$gray-5;
+  margin-top: 3.5rem;
+  margin-bottom: 3.5rem;
+  height: 26.75rem;
+  margin-right: 6.8rem;
+  margin-left: 6.8rem;
+
+}
+
+app-footer {
+  margin-top: auto;
+}
