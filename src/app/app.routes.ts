@@ -3,6 +3,12 @@ import { HomeComponent } from './pages/home/home.component';
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
 import { SignupUserComponent } from './pages/signup-user/signup-user.component';
 import { LoginComponent } from './pages/login/login.component';
+import { ProjectLayoutComponent } from './pages/project/project-layout/project-layout.component';
+import { StepInfoComponent } from './pages/project/step-info/step-info.component';
+import { StepIntroComponent } from './pages/project/step-intro/step-intro.component';
+import { RewardInfoComponent } from './pages/project/reward-info/reward-info.component';
+import { StepRewardComponent } from './pages/project/step-reward/step-reward.component';
+import { ConfirmComponent } from './pages/project/confirm/confirm.component';
 
 export const routes: Routes = [
     {
@@ -20,5 +26,16 @@ export const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent,
+  },
+  {
+    path: 'project',
+    component: ProjectLayoutComponent,
+    children: [
+      { path: 'create', component: StepIntroComponent },
+      { path: 'info', component: StepInfoComponent },
+      { path: 'reward', component: StepRewardComponent },
+      { path: 'reward-info', component: RewardInfoComponent },
+      { path: 'confirm', component: ConfirmComponent },
+    ]
   }
 ];
