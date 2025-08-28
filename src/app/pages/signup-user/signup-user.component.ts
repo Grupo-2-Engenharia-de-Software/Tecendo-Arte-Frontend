@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, ValidatorFn, Validators, ValidationErrors, AbstractControl } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
+import { UsuarioService } from '../../services/usuario/usuario.service';
 
 @Component({
   selector: 'app-cadastro-user',
@@ -16,10 +17,10 @@ export class SignupUserComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private router: Router
+    private router: Router,
+    private usuarioService: UsuarioService
   ) {}
 
-  // mover essa função para uma pasta utils futuramente
   validacaoConfirmaSenha(c1: string, c2: string): ValidatorFn {
     return (formGroup: AbstractControl): ValidationErrors | null => {
       const campo = formGroup.get(c1);
@@ -45,16 +46,35 @@ export class SignupUserComponent implements OnInit {
 
   ngOnInit(): void {
       this.formCadastro = this.fb.group({
-        userNome: ['', [Validators.required]],
-        userEmail: ['', [Validators.required, Validators.email]],
-        userSenha: ['', [Validators.required, Validators.minLength(8)]],
-        userConfirmaSenha: ['', [Validators.required]]
+        nome: ['', [Validators.required]],
+        email: ['', [Validators.required, Validators.email]],
+        senha: ['', [Validators.required, Validators.minLength(8)]],
+        confirmaSenha: ['', [Validators.required]]
       }, {
-        validators: this.validacaoConfirmaSenha('userSenha', 'userConfirmaSenha')
+        validators: this.validacaoConfirmaSenha('senha', 'confirmaSenha')
       })
   }
 
   irParaLogin(): void {
     this.router.navigate(['/login']);
+  }
+
+  submit() {
+    const conta = {
+      nome: this.formCadastro.value.nome,
+      email: this.formCadastro.value.email,
+      senha: this.formCadastro.value.senha,
+      tipoConta: 'USUARIO'
+    }
+
+    if(this.formCadastro.valid) {
+      this.usuarioService.criarConta(conta).subscribe({
+        next: res => console.log('Essa é a saída:', res),
+        error: err => console.error('Erro:', err)
+      });
+    } else {
+      // temporário
+      console.log('Formulário incompleto')
+    }
   }
 }
