@@ -21,7 +21,6 @@ export class SignupUserComponent implements OnInit {
     private usuarioService: UsuarioService
   ) {}
 
-  // mover essa função para uma pasta utils futuramente
   validacaoConfirmaSenha(c1: string, c2: string): ValidatorFn {
     return (formGroup: AbstractControl): ValidationErrors | null => {
       const campo = formGroup.get(c1);
@@ -67,8 +66,6 @@ export class SignupUserComponent implements OnInit {
       senha: this.formCadastro.value.senha,
       tipoConta: 'USUARIO'
     }
-
-    // console.log(conta);  
 
     if(this.formCadastro.valid) {
       this.usuarioService.criarConta(conta).subscribe({
