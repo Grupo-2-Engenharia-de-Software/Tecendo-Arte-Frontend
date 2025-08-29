@@ -21,20 +21,66 @@ html, body {
   min-height: 100vh;
 }
 
-.content {
-  flex: 1;
-}
-
 .retangle {
   background-color: c.$gray-5;
-  margin-top: 3.5rem;
-  margin-bottom: 3.5rem;
-  height: 26.75rem;
-  margin-right: 6.8rem;
-  margin-left: 6.8rem;
-
+  margin: 3.5rem 6.8rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
+
 
 app-footer {
   margin-top: auto;
+}
+
+.tittle {
+  font-weight: normal;
+  font-size: 3.125rem;
+  color: c.$pink-1;
+  text-align: center;
+  padding: 0;
+}
+
+.subtittle {
+  font-size: 2.1875rem;
+  font-weight: normal;
+  text-align: center;
+  padding: 0;
+}
+
+.button {
+  width: 15.83vw;
+  height: 5.56vh;
+  font-weight: normal;
+  font-family: inherit;
+  font-size: 1.5625rem;
+  color: c.$white-1;
+  background-color: c.$pink-1;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  box-shadow: 0rem 0rem 0.938rem -0.313rem c.$pink-1;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.button:hover {
+  background-color: c.$pink-4;
+  transform: translateY(-2px);
+}
+
+.button-style {
+  text-align: center;
+  padding: 1.02vh 3.18vw 1.02vh 2.66vw;
+}
+
+.content-page {
+  padding-left: 14.53vw;
+  padding-right: 14.53vw;
+  padding-top: 7.87vh;
+  padding-bottom: 5.83vh;
+  display: block;
+  align-items: center;
+  align-content: center;
 }

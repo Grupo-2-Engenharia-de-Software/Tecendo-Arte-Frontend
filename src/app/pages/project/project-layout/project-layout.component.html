@@ -6,17 +6,21 @@
     <div class="retangle">
       <div class="container">
         @if (!childActive) {
+          <div class="content-page">
             <div>
                 <h1 class="tittle">Comece um projeto</h1>
-                <h3 class="subtittle">Comece seu projeto hoje e traga seu projeto ao mundo!</h3>
-                <div>
-                <button class="button" routerLink="create">Iniciar cadastro</button>
-                </div>
+            </div>
+            <div>
+              <h3 class="subtittle">Comece seu projeto hoje e traga seu projeto ao mundo!</h3>
+            </div>
+            <div class="button-style">
+              <button class="button" routerLink="create">Iniciar cadastro</button>
+            </div>
             </div>
             }
       </div>
 
-      <main class="content">
+      <main>
         <router-outlet></router-outlet>
       </main>
     </div>
