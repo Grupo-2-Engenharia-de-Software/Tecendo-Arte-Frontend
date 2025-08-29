@@ -42,7 +42,8 @@ app-footer {
   font-size: 3.125rem;
   color: c.$pink-1;
   text-align: center;
-  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .subtittle {
@@ -50,6 +51,8 @@ app-footer {
   font-weight: normal;
   text-align: center;
   padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .button {
@@ -66,6 +69,8 @@ app-footer {
   border-radius: 0.5rem;
   box-shadow: 0rem 0rem 0.938rem -0.313rem c.$pink-1;
   transition: transform 0.2s ease, background-color 0.2s ease;
+  margin-top: 4.6875rem;
+  margin-bottom: 0;
 }
 
 .button:hover {
@@ -79,11 +84,14 @@ app-footer {
 }
 
 .content-page {
-  padding-left: 14.53vw;
-  padding-right: 14.53vw;
-  padding-top: 7.87vh;
-  padding-bottom: 5.83vh;
-  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  align-content: center;
+  justify-content: center;
+
 }
