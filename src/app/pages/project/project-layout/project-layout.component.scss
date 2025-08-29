@@ -23,7 +23,10 @@ html, body {
 
 .retangle {
   background-color: c.$gray-5;
-  margin: 3.5rem 6.8rem;
+  width: 1294px;   /* ou em vw */
+  height: 453px;   /* ou em vh */
+  margin: 3.5rem auto; /* centraliza horizontalmente */
+  display: flex; 
   flex-direction: column;
   align-items: center;
   justify-content: center;
