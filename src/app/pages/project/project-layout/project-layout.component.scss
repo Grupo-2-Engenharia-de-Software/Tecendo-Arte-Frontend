@@ -1,8 +1,8 @@
 @use '../../../assets/scss/colors.scss' as c;
 
 html, body {
-  height: 100%; /* garante altura total */
-  margin: 0;    /* remove margens padrão */
+  height: 100%;
+  margin: 0;
 }
 
 .background {
@@ -23,9 +23,9 @@ html, body {
 
 .retangle {
   background-color: c.$gray-5;
-  width: 1294px;   /* ou em vw */
-  height: 453px;   /* ou em vh */
-  margin: 3.5rem auto; /* centraliza horizontalmente */
+  width: 1294px;
+  height: 453px;
+  margin: 3.5rem auto;
   display: flex; 
   flex-direction: column;
   align-items: center;
