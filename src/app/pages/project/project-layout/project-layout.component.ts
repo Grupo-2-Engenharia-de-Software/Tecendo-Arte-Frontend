@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Router, NavigationEnd, RouterModule } from '@angular/router';
 import { FooterComponent } from "../../../components/footer/footer.component";
 import { HeaderComponent } from "../../../components/header/header.component";
 
@@ -16,4 +16,14 @@ export class ProjectLayoutComponent {
     name: '',
     description: ''
   };
+
+  childActive = false;
+
+  constructor(private router: Router) {
+this.router.events.subscribe((event: any) => {
+      if (event instanceof NavigationEnd) {
+        this.childActive = this.router.url !== '/project';
+      }
+    });
+  }
 }

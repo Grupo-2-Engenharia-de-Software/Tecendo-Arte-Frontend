@@ -1,21 +1,26 @@
 <div class="project-layout">
-    <app-header></app-header>
-    <div class="background"></div>
-    <div>
-        <div class="retangle">
-            <h1>Fluxo de Criação de Projeto</h1>
-            <nav>
-            <a routerLink="create">Intro</a> |
-            <a routerLink="info">Info</a> |
-            <a routerLink="reward">Reward</a>
-                </nav>
-            <main class="content">
-                <!-- Aqui os filhos serão renderizados -->
-                <router-outlet></router-outlet>
-            </main>
-        </div>
+  <app-header></app-header>
+  <div class="background"></div>
+
+  <div>
+    <div class="retangle">
+      <div class="container">
+        @if (!childActive) {
+            <div>
+                <h1 class="tittle">Comece um projeto</h1>
+                <h3 class="subtittle">Comece seu projeto hoje e traga seu projeto ao mundo!</h3>
+                <div>
+                <button class="button" routerLink="create">Iniciar cadastro</button>
+                </div>
+            </div>
+            }
+      </div>
+
+      <main class="content">
+        <router-outlet></router-outlet>
+      </main>
     </div>
-    <app-footer></app-footer>
+  </div>
+
+  <app-footer></app-footer>
 </div>
-
-

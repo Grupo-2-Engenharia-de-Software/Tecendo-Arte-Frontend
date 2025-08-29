@@ -1,1 +1,12 @@
-<p>step-reward works!</p>
+<div class="container">
+  <div>
+    <h1>tera recompensa?</h1>
+  </div>
+  <div>
+    <button (click)="next(true)">Sim</button>
+    <button (click)="next(false)">Não</button>
+  </div>
+  <main class="content">
+    <router-outlet></router-outlet>
+  </main>
+</div>

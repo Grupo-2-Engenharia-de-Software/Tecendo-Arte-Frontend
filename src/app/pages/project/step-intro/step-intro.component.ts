@@ -15,6 +15,6 @@ export class StepIntroComponent {
 
   next() {
     // Poderia emitir evento para atualizar estado do pai
-    this.router.navigate(['project/info']);
+    this.router.navigate(['project/reward']);
   }
 }

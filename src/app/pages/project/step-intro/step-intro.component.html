@@ -1,7 +1,11 @@
-<h2>Step 1: Introdução</h2>
-<label>
-  Nome do projeto:
-  <input [(ngModel)]="name" placeholder="Digite o nome" />
-</label>
-<br/>
-<button (click)="next()">Próximo</button>
+<div class="container">
+  <div>
+    <h1>Informações iniciais</h1>
+  </div>
+  <div>
+    <button (click)="next()">botao</button>
+  </div>
+  <main class="content">
+    <router-outlet></router-outlet>
+  </main>
+</div>
