@@ -1,0 +1,59 @@
+@use '../../../assets/scss/colors.scss' as c;
+
+.content-page {
+  padding-left: 14.53vw;
+  padding-right: 14.53vw;
+  padding-bottom: 5.83vh;
+  justify-content: center;
+  text-align: center;
+}
+
+.tittle {
+  font-weight: normal;
+  font-size: 2.25rem;
+  color: c.$pink-1;
+  text-align: start;
+  margin-left: 3.6vw;
+  margin-top: 0;
+}
+
+.subtittle {
+  font-size: 2.1875rem;
+  font-weight: normal;
+  text-align: center;
+  margin-top: 6.67vh;
+}
+
+.container {
+  display: block;
+  margin-top: 0;
+}
+
+.buttons {
+  width: 11.25rem;
+  height: 3.75rem;
+  font-weight: normal;
+  font-family: inherit;
+  font-size: 1.5625rem;
+  color: c.$white-1;
+  background-color: c.$pink-1;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  box-shadow: 0rem 0rem 0.938rem -0.313rem c.$pink-1;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  margin-bottom: 0;
+  margin-right: 1.875rem; 
+  margin-left: 1.875rem;
+}
+
+.buttons:hover {
+  background-color: c.$pink-4;
+  transform: translateY(-2px);
+}
+
+.button-style {
+  text-align: center;
+  padding: 1.02vh 3.18vw 1.02vh 2.66vw;
+}

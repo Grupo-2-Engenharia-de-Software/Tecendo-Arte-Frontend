@@ -4,8 +4,8 @@
 
   <div>
     <div class="retangle">
-      <div class="container">
-        @if (!childActive) {
+      @if (!childActive) {
+        <div class="container">
           <div class="content-page">
             <div>
                 <h1 class="tittle">Comece um projeto</h1>
@@ -16,9 +16,9 @@
             <div class="button-style">
               <button class="button" routerLink="create">Iniciar cadastro</button>
             </div>
-            </div>
-            }
-      </div>
+          </div>
+        </div>
+      }
 
       <main>
         <router-outlet></router-outlet>
