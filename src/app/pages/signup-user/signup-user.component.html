@@ -5,32 +5,32 @@
     </div>
     
     <div class="formSide">
-        <form class="cadastroForm" [formGroup]="formCadastro">
+        <form class="cadastroForm" (ngSubmit)="submit()" [formGroup]="formCadastro">
             <h2 class="projetoTitulo">Tecendo <br> Arte</h2>
             <h3 class="cadastroTitulo">Crie sua conta</h3>
 
             <div class="cadastroCampos">
-                <label for="userNome">Nome</label>
-                <input id="userNome" type="text" placeholder="Digite seu nome" formControlName="userNome">
+                <label for="nome">Nome</label>
+                <input id="nome" type="text" placeholder="Digite seu nome" formControlName="nome">
             </div>
 
             <div class="cadastroCampos">
-                <label for="userEmail">E-mail</label>
-                <input id="userEmail" type="text" placeholder="Digite seu e-mail" formControlName="userEmail">
+                <label for="email">E-mail</label>
+                <input id="email" type="text" placeholder="Digite seu e-mail" formControlName="email">
             </div>
 
             <div class="cadastroCampos">
-                <label for="userSenha">Senha</label>
-                <input id="userSenha" type="password" placeholder="Digite sua senha" formControlName="userSenha">
+                <label for="senha">Senha</label>
+                <input id="senha" type="password" placeholder="Digite sua senha" formControlName="senha">
             </div>
 
             <div class="cadastroCampos">
-                <label for="userConfirmaSenha">Confirmar senha</label>
-                <input id="userConfirmaSenha" type="password" [class.erroCampo]="formCadastro.controls['userConfirmaSenha'].errors?.['mustMatch']" placeholder="Confirme sua senha" formControlName="userConfirmaSenha">
+                <label for="confirmaSenha">Confirmar senha</label>
+                <input id="confirmaSenha" type="password" [class.erroCampo]="formCadastro.controls['confirmaSenha'].errors?.['mustMatch']" placeholder="Confirme sua senha" formControlName="confirmaSenha">
                 
                 @if (
-                        formCadastro.controls['userConfirmaSenha'].dirty && 
-                        formCadastro.controls['userConfirmaSenha'].errors?.['mustMatch']
+                        formCadastro.controls['confirmaSenha'].dirty && 
+                        formCadastro.controls['confirmaSenha'].errors?.['mustMatch']
                     ) {
                     <div class="erroMsg">
                         As senhas não coincidem
@@ -39,7 +39,7 @@
             </div>
 
             <div class="botoesForm">
-                <button>Cadastrar</button>
+                <button type="submit">Cadastrar</button>
                 <button (click)="irParaLogin()">Já tenho conta!</button>
             </div>
         </form>
