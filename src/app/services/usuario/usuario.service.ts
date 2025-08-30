@@ -12,7 +12,7 @@ export class UsuarioService {
   constructor(private http: HttpClient) { }
 
   criarConta(conta: any): Observable<any> {
-    return this.http.post(`${this.backend}/api/conta`, conta);
+    return this.http.post(`${this.backend}/contas`, conta);
   } 
 
 }
