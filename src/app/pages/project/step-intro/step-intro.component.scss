@@ -1,0 +1,91 @@
+@use '../../../assets/scss/colors.scss' as c;
+
+.content-page {
+  max-width: 90vw;
+  margin: 0 auto;
+  padding-top: 5.83vh;
+  padding-bottom: 5.83vh;
+  
+}
+
+.container {
+  display: block;
+  margin-top: 0;
+}
+
+.tittle {
+  font-weight: normal;
+  font-size: 2.25rem;
+  color: c.$pink-1;
+  text-align: start;
+  margin-left: 0;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 70px;
+}
+
+.form-group {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 4rem;
+  margin-left: 0; 
+  padding-left: 0;
+  margin-top: 70px;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 14px;
+  color: c.$brown-2;
+  margin-bottom: 0.5rem;
+}
+
+input[type="text"],
+input[type="file"] {
+  border: none;
+  border-bottom: 1px solid c.$pink-1;
+  background-color: transparent;
+  font-size: 14px;
+  width: 28rem;
+}
+
+input[type="text"]:focus,
+input[type="file"]:focus {
+  outline: none;
+  border-bottom: 2px solid c.$pink-1;
+}
+
+.button-style {
+  text-align: right;
+  margin-top: 2rem;
+  padding-right: 0; 
+}
+
+.buttom {
+  border: none;
+  height: 2.5rem;
+  width: 6rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-weight: normal;
+  font-family: inherit;
+  color: c.$white-1;
+  background-color: c.$pink-1;
+  box-shadow: 0rem 0rem 0.938rem -0.313rem c.$pink-1;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.buttom:hover {
+  background-color: c.$pink-4;
+  transform: translateY(-2px);
+}

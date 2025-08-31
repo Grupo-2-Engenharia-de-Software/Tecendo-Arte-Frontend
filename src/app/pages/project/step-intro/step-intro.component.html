@@ -1,11 +1,30 @@
 <div class="container">
   <div>
-    <h1>Informações iniciais</h1>
+    <h1 class="tittle">Informações iniciais</h1>
   </div>
-  <div>
-    <button (click)="next()">botao</button>
+  <form [formGroup]="form">
+    <div class="form-group">
+        <div class="form-row">
+            <label for="nome">Nome do projeto</label>
+            <input type="text" id="nome" formControlName="nome" required>
+        </div>
+        <div class="form-row">
+            <label for="descricao">Descrição do projeto</label>
+            <input type="text" id="descricao" formControlName="descricao" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="form-row">
+            <label for="periodo">Periodo de arrecadação</label>
+            <input type="text" id="periodo" formControlName="periodo" required>
+        </div>
+        <div class="form-row">
+            <label for="meta">Meta desejada</label>
+            <input type="text" id="meta" formControlName="meta" required>
+        </div>
+    </div>
+  </form>
+  <div class="button-style">
+    <button class="buttom" type="buttons" (click)="next()">Avançar</button>
   </div>
-  <main class="content">
-    <router-outlet></router-outlet>
-  </main>
 </div>
