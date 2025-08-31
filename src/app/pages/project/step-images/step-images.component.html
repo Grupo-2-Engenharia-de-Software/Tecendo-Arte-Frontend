@@ -1,11 +1,21 @@
+   <!--colocar (ngSubmit)="submitForm()-->
 <div class="container">
   <div>
-    <h1>Adicionar imagens</h1>
+    <h1 class="tittle">Imagens do projeto</h1>
   </div>
-  <div>
-    <button (click)="next()">botao</button>
+  <form [formGroup]="form">
+    <div class="form-group">
+      <div class="form-row">
+        <label for="images">Upload de imagens</label>
+        <input type="text" id="images" formControlName="images" required>
+      </div>
+      <div class="form-row">
+        <label for="descricao">Descrição das imagens</label>
+        <input type="text" id="descricao" formControlName="descricao" required>
+      </div>
+    </div>
+  </form>
+  <div class="button-style">
+    <button class="buttom" type="buttons" (click)="next()">Avançar</button>
   </div>
-  <main class="content">
-    <router-outlet></router-outlet>
-  </main>
 </div>
