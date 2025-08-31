@@ -8,6 +8,19 @@
     <img id="flower" src="../../assets/imgs/Home-flower.png" alt="">
   </main>
 
+<section class="projects">
+  <div class="first-row">
+    <h1 class="title">Projetos de destaque</h1>
+    <a href="" class="see-all">Ver todos</a>
+  </div>
+
+  <div class="projects-container">
+    <app-card-project *ngFor="let project of mockProjects" [project]="project"></app-card-project>
+  </div>
+</section>
+
+  
+
 
   
   <app-footer></app-footer>
