@@ -1,4 +1,3 @@
-   <!--colocar (ngSubmit)="submitForm()-->
 <div class="container">
   <div>
     <h1 class="tittle">Imagens do projeto</h1>
@@ -7,7 +6,12 @@
     <div class="form-group">
       <div class="form-row">
         <label for="images">Upload de imagens</label>
-        <input type="text" id="images" formControlName="images" required>
+        <input 
+          type="file" 
+          id="images" 
+          formControlName="images" 
+          accept="image/*"
+          multiple>
       </div>
       <div class="form-row">
         <label for="descricao">Descrição das imagens</label>
@@ -16,6 +20,6 @@
     </div>
   </form>
   <div class="button-style">
-    <button class="buttom" type="buttons" (click)="next()">Avançar</button>
+    <button class="buttom" type="button" (click)="next()">Avançar</button>
   </div>
 </div>

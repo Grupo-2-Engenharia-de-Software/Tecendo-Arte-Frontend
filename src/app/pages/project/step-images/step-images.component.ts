@@ -20,7 +20,7 @@ export class StepImagesComponent {
   }
   
   next() {
-    sessionStorage.setItem('reward-info', JSON.stringify(this.form.value));
+    sessionStorage.setItem('project-images', JSON.stringify(this.form.value));
     this.router.navigate(['project/created']);
   }
 }

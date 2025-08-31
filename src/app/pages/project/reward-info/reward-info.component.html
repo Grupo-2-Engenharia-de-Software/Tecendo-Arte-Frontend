@@ -10,7 +10,12 @@
       </div>
       <div class="form-row">
         <label for="images">Upload de imagens</label>
-        <input type="text" id="images" formControlName="images" required>
+        <input 
+          type="file" 
+          id="images" 
+          formControlName="images" 
+          accept="image/*"
+          multiple>
       </div>
     </div>
   </form>
