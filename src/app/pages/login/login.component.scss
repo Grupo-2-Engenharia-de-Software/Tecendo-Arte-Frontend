@@ -1,4 +1,4 @@
-@import '../../assets/scss/colors.scss';
+@use '../../assets/scss/colors.scss' as *;
 
 html, body { height: 100%; margin: 0; }
 * { box-sizing: border-box; }
