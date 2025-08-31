@@ -18,8 +18,8 @@ export class HomeComponent{
   mockProjects: Project[] = [
     {
       image: '../../assets/images/artesanato.jpg',
-      title: 'Desenvolvimento de App de IA',
-      description: 'Criação de um aplicativo móvel com inteligência artificial para otimizar o dia a dia de estudantes.',
+      title: 'Artesanato',
+      description: 'Potes Bonitos',
       author: 'João Silva',
       tags: ['Tecnologia', 'IA', 'Mobile'],
       totalRaised: 12500.50,
@@ -27,8 +27,8 @@ export class HomeComponent{
     },
     {
       image: '../../assets/images/artesanato.jpg',
-      title: 'Plantação Sustentável',
-      description: 'Projeto social para criar uma horta comunitária e educar sobre agricultura orgânica.',
+      title: 'Artesanato',
+      description: 'Potes Bonitos',
       author: 'Maria Oliveira',
       tags: ['Sustentabilidade', 'Comunidade', 'Meio Ambiente'],
       totalRaised: 5200.00,
@@ -36,8 +36,8 @@ export class HomeComponent{
     },
     {
       image: '../../assets/images/artesanato.jpg',
-      title: 'Plantação Sustentável',
-      description: 'Projeto social para criar uma horta comunitária e educar sobre agricultura orgânica.',
+      title: 'Artesanato',
+      description: 'Potes Bonitos.',
       author: 'Maria Oliveira',
       tags: ['Sustentabilidade', 'Comunidade', 'Meio Ambiente'],
       totalRaised: 5200.00,

@@ -85,15 +85,22 @@
       padding: 0rem 3rem;
       display: grid;
       grid-template-columns: repeat(3, 1fr); 
-      padding: 2rem;
-      gap:4rem;
-      margin: 0 auto;
-      margin-top: 2rem; 
-      justify-content: center; 
-      align-items: center;
-      box-sizing: border-box;
-
+      gap: 2rem;
     }
+
+
+  
+  justify-content: center;
+  
+  margin: 0 auto;
+  margin-top: 2rem;
+  box-sizing: border-box;
+
+  @media(max-width: 1440px){
+    gap: 2rem;
+    padding: 0rem;
+  }
+  
 
   
   }
