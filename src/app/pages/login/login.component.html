@@ -8,12 +8,26 @@
     <h2 class="welcome">Bem vindo(a)!</h2>
 
     <div class="form-fields">
-      <form>
+      <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
         <label for="username">Nome de usuário ou e-mail</label>
-        <input id="username" type="text" placeholder="Digite seu nome de usuário ou e-mail">
+        <input
+          id="username"
+          type="text"
+          placeholder="Digite seu nome de usuário ou e-mail"
+          [(ngModel)]="email"
+          name="email"
+          required
+        >
 
         <label for="password">Senha</label>
-        <input id="password" type="password" placeholder="Digite sua senha">
+        <input
+          id="password"
+          type="password"
+          placeholder="Digite sua senha"
+          [(ngModel)]="senha"
+          name="senha"
+          required
+        >
 
         <div class="remember">
           <input type="checkbox" id="remember">
@@ -27,6 +41,9 @@
 
         <a href="/forgot-password" class="forgot">Esqueceu a senha?</a>
       </form>
+
+      <p *ngIf="message" style="text-align:center; color: red;">{{ message }}</p>
+
     </div>
   </div>
 </div>
