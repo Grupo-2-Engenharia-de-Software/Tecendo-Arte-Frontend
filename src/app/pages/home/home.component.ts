@@ -21,7 +21,7 @@ export class HomeComponent{
       title: 'Artesanato',
       description: 'Potes Bonitos',
       author: 'João Silva',
-      tags: ['Tecnologia', 'IA', 'Mobile'],
+      tags: ['Tecnologia', 'IA'],
       totalRaised: 12500.50,
       endDate: new Date('2025-12-31')
     },
@@ -30,7 +30,7 @@ export class HomeComponent{
       title: 'Artesanato',
       description: 'Potes Bonitos',
       author: 'Maria Oliveira',
-      tags: ['Sustentabilidade', 'Comunidade', 'Meio Ambiente'],
+      tags: ['Sustentabilidade', 'Comunidade'],
       totalRaised: 5200.00,
       endDate: new Date('2026-06-15')
     },
@@ -39,7 +39,7 @@ export class HomeComponent{
       title: 'Artesanato',
       description: 'Potes Bonitos.',
       author: 'Maria Oliveira',
-      tags: ['Sustentabilidade', 'Comunidade', 'Meio Ambiente'],
+      tags: ['Sustentabilidade', 'Comunidade'],
       totalRaised: 5200.00,
       endDate: new Date('2026-06-15')
     }
