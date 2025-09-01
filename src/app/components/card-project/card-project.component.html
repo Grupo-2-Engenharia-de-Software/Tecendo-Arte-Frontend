@@ -1,0 +1,24 @@
+<div class="container">
+ <img class="image" src="{{project.image}}" alt="">
+ <section class="informations">
+  <div class="top">
+   <div class="left">
+    <h1 class="title">{{ project.title }}</h1>
+    <p class="description">{{ project.description }}</p>
+    <div class="tags">
+     <p class="tag" *ngFor="let tag of project.tags">{{ tag }}</p>
+    </div>
+   </div>
+   <div class="right">
+    <h1 class="author">{{ project.author }}</h1>
+   </div>
+  </div>
+  <div class="bottom">
+   <div class="progress">
+    <h1 class="end">2 dias restantes</h1> 
+    <h1 class="progress-text">75%</h1>
+   </div>
+   <app-progress-bar [progress]="75"></app-progress-bar>
+  </div>
+ </section>
+</div>
