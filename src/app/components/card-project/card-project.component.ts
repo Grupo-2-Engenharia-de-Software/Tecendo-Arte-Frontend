@@ -1,10 +1,11 @@
 import { Component, Input } from '@angular/core';
 import { Project } from '../../models/project.interface,';
 import { ProgressBarComponent } from '../progress-bar/progress-bar.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-card-project',
-  imports: [ProgressBarComponent],
+  imports: [ProgressBarComponent,CommonModule],
   templateUrl: './card-project.component.html',
   styleUrl: './card-project.component.scss'
 })
