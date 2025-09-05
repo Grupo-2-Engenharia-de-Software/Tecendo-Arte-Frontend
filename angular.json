@@ -34,6 +34,7 @@
               }
             ],
             "styles": [
+              "node_modules/ngx-toastr/toastr.css",
               "src/app/assets/scss/colors.scss",
               "src/app/assets/scss/styles.scss"
             ],
