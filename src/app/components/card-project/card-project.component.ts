@@ -12,8 +12,9 @@ import { CommonModule } from '@angular/common';
 export class CardProjectComponent {
    @Input() project!: Project;
 
-  get formattedTotalRaised(): string {
-    return `R$ ${this.project.totalRaised.toFixed(2)}`;
+  getPercentage(): number {
+    const percentage = (this.project.valorArrecadado / this.project.meta) * 100;
+    return Number(percentage.toFixed(2));
   }
 
 }
