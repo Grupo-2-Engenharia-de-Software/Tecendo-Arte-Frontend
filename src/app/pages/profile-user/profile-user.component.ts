@@ -17,7 +17,6 @@ export class ProfileUserComponent {
 
   ngOnInit(): void {
     this.usuario = this.usuarioService.getLoggedUser();
-    console.log(this.usuario)
   }
   
 
