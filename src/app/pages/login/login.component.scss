@@ -1,4 +1,4 @@
-@import '../../assets/scss/colors.scss';
+@use '../../assets/scss/colors.scss' as *;
 
 html, body { height: 100%; margin: 0; }
 * { box-sizing: border-box; }
@@ -162,6 +162,20 @@ html, body { height: 100%; margin: 0; }
       cursor: pointer;
       font-family: 'Yusei Magic', sans-serif;
       font-size: 1rem;
+    }
+
+    a{
+      flex-basis: 50%;
+      height: 2.5rem;
+      border: none;
+      border-radius: 0.38rem;
+      cursor: pointer;
+      font-family: 'Yusei Magic', sans-serif;
+      font-size: 1rem;
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .btn-login,
