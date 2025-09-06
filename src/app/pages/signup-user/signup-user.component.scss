@@ -104,6 +104,56 @@
     color: red;
 }
 
+.alerta-erro {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: c.$pink-1;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+
+  &.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .fechar {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+  }
+}
+
+.seletorConta {
+    display: flex;
+    width: 100%;
+    margin-bottom: 1.3rem;
+    align-items: center;
+    margin-top: -0.5rem;
+    gap: 1.2rem;
+
+    label {
+        font-size: 1rem;
+        font-family: 'Yusei Magic';
+        font-weight: normal;
+        font-weight: 500;
+        color: c.$black-1;
+    }
+
+    input {
+        font-size: 1rem;
+    }
+}
+
 .botoesForm {
     display: flex;
     justify-content: center;
