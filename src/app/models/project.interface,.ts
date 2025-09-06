@@ -1,4 +1,4 @@
-export interface Project {
+export interface ProjectResponse {
   idProjeto: number;
   titulo: string;
   descricaoProjeto: string;
@@ -8,4 +8,10 @@ export interface Project {
   status: string;
   tipoArte: string;
   nomeArtista: string;
+  imagens:[{
+    idImagem: number;
+    dadosImagemBase64: string;
+    descricao: string;
+    tipoMime: string;
+  }]
 }

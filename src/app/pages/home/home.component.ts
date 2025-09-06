@@ -4,7 +4,7 @@ import { FooterComponent } from '../../components/footer/footer.component';
 import { CardProjectComponent } from '../../components/card-project/card-project.component';
 import { CommonModule } from '@angular/common';
 import { ProjectService } from '../../services/project/project.service';
-import { Project } from '../../models/project.interface,';
+import { ProjectResponse } from '../../models/project.interface,';
 
 @Component({
   selector: 'app-home',
@@ -14,13 +14,13 @@ import { Project } from '../../models/project.interface,';
 })
 export class HomeComponent implements OnInit {
 
-  projects: Project[] = [];
+  projects: ProjectResponse[] = [];
 
   constructor(private projectService: ProjectService) {}
 
   ngOnInit(): void {
     this.projectService.getProjects().subscribe({
-      next: (data: Project[]) => {
+      next: (data: ProjectResponse[]) => {
         this.projects = data; 
       },
       
