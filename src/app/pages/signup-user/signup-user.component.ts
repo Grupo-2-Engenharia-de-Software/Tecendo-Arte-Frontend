@@ -83,6 +83,7 @@ export class SignupUserComponent implements OnInit {
     }
   }
 
+  // Tornar um componente futuramente
   exibirMsg(mensagem: string) {
     this.mensagem = mensagem;
     this.mostrar = true;
