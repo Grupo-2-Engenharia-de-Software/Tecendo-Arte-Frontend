@@ -74,7 +74,13 @@ export class SignupUserComponent implements OnInit {
 
     if(this.formCadastro.valid) {
       this.usuarioService.criarConta(conta).subscribe({
-        next: res => this.exibirMsg('Cadastrado com sucesso!'),
+        next: res => { 
+          this.exibirMsg('Cadastrado com sucesso!');
+
+          setTimeout( () => {
+            this.irParaLogin();
+          }, 2000)
+        },
         error: err => this.exibirMsg('Erro: ' + err.error)
       });
     } else {
@@ -92,7 +98,6 @@ export class SignupUserComponent implements OnInit {
       clearTimeout(this.timeoutRef);
     }
 
-    // Faz sumir depois de 5s
     this.timeoutRef = setTimeout(() => {
       this.fechar();
     }, 5000);
@@ -102,6 +107,6 @@ export class SignupUserComponent implements OnInit {
     this.mostrar = false;
     setTimeout(() => {
       this.mensagem = null;
-    }, 300); // tempo para animar
+    }, 300);
   }
 }
