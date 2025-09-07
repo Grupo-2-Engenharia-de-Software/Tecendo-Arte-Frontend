@@ -14,6 +14,7 @@ export class LoginComponent {
 
   email: string = '';
   senha: string = '';
+  loginType: string = 'USUARIO';
   message: string = '';
 
   constructor(private usuarioService: UsuarioService) {}
@@ -24,7 +25,7 @@ export class LoginComponent {
       senha: this.senha
     };
 
-    this.usuarioService.login(loginData).subscribe({
+    this.usuarioService.login(loginData, this.loginType).subscribe({
       next: (response: LoginResponse) => {
         console.log('Login realizado com sucesso!', response);
         this.message = `Bem-vindo(a), ${response.nome}!`;

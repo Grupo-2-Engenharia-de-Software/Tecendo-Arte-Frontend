@@ -90,6 +90,24 @@ html, body { height: 100%; margin: 0; }
     }
   }
 
+  .accountType {
+    display: flex;
+    width: 100%;
+    gap: 1.2rem;
+
+    label {
+      font-size: 1rem;
+      font-family: 'Yusei Magic';
+      font-weight: normal;
+      font-weight: 500;
+      color: $black-1;
+    }
+
+    input {
+      font-size: 1rem;
+    }
+  }
+  
  .remember {
   display: flex;
   align-items: center;
