@@ -44,8 +44,4 @@ export class UsuarioService {
     return null;
   }
 
-  isLoggedIn(): boolean {
-    return !!this.getLoggedUser();
-  }
-
 }
