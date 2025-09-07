@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { UsuarioService, LoginRequest, LoginResponse } from '../../services/usuario/usuario.service';
+import { Router } from '@angular/router'; 
 
 @Component({
   selector: 'app-login',
@@ -16,7 +17,7 @@ export class LoginComponent {
   senha: string = '';
   message: string = '';
 
-  constructor(private usuarioService: UsuarioService) {}
+  constructor(private usuarioService: UsuarioService,private router: Router) {}
 
   onSubmit() {
     const loginData: LoginRequest = {
@@ -26,14 +27,12 @@ export class LoginComponent {
 
     this.usuarioService.login(loginData).subscribe({
       next: (response: LoginResponse) => {
-        console.log('Login realizado com sucesso!', response);
-        this.message = `Bem-vindo(a), ${response.nome}!`;
-
         localStorage.setItem('token', response.token);
         localStorage.setItem('usuario', JSON.stringify(response));
+        
+        this.router.navigate(['/profile-user']);
       },
       error: (err: any) => {
-        console.error('Erro no login:', err);
         this.message = 'E-mail ou senha inválidos.';
       }
     });

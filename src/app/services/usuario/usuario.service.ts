@@ -22,7 +22,7 @@ export interface LoginResponse {
 export class UsuarioService {
   private backend = environment.apiUrl;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   criarConta(conta: any): Observable<any> {
     return this.http.post(`${this.backend}/contas`, conta);
@@ -30,5 +30,13 @@ export class UsuarioService {
 
   login(data: LoginRequest): Observable<LoginResponse> {
     return this.http.post<LoginResponse>(`${this.backend}/usuarios/login`, data);
+  }
+
+  getLoggedUser(): LoginResponse | null {
+    const usuarioJson = localStorage.getItem('usuario');
+    if (usuarioJson) {
+      return JSON.parse(usuarioJson);
+    }
+    return null;
   }
 }
