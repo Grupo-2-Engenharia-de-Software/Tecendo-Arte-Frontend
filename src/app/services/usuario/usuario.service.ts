@@ -37,10 +37,20 @@ export class UsuarioService {
   }
 
   getLoggedUser(): LoginResponse | null {
+    if (typeof window === 'undefined') {
+      return null;
+    }
+
     const usuarioJson = localStorage.getItem('usuario');
     if (usuarioJson) {
       return JSON.parse(usuarioJson);
     }
     return null;
   }
+
+  isLoggedIn(): boolean {
+    if (typeof window === 'undefined') return false;
+    return !!this.getLoggedUser();
+  }
+
 }

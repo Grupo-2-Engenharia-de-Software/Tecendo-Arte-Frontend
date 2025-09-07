@@ -49,7 +49,13 @@ export class StepIntroComponent {
   next() {
     const formValue = { ...this.form.value };
 
-    this.projetoService.setData(formValue);
+    this.projetoService.setData({
+      titulo: formValue.nome,
+      tipoArte: formValue.tipoArte,
+      descricaoProjeto: formValue.descricao,
+      meta: formValue.meta
+    });
+
     this.router.navigate(['project/reward']);
   }
 

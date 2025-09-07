@@ -33,7 +33,8 @@ export const routes: Routes = [
   {
     path: 'project',
     component: ProjectLayoutComponent,
-    canActivate: [authGuard],   
+    canActivate: [authGuard],
+    canActivateChild: [authGuard],   
     children: [
       { path: 'create', component: StepIntroComponent },
       { path: 'reward', component: StepRewardComponent },
