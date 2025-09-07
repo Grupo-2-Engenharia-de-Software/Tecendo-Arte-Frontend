@@ -1,0 +1,34 @@
+<div class="container">
+  <div>
+    <h1 class="tittle">Informações iniciais</h1>
+  </div>
+  <form [formGroup]="form">
+    <div class="form-group">
+        <div class="form-row">
+            <label for="nome">Nome do projeto</label>
+            <input type="text" id="nome" formControlName="nome" required>
+        </div>
+        <div class="form-row">
+            <label for="descricao">Descrição do projeto</label>
+            <input type="text" id="descricao" formControlName="descricao" required>
+        </div>
+    </div>
+    <div class="form-group">
+      <div class="form-row">
+        <label for="tipoArte">Tipo de arte</label>
+        <select id="tipoArte" formControlName="tipoArte" required>
+          <option *ngFor="let tipo of tiposArte" [value]="tipo">
+            {{ tipo }}
+          </option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label for="meta">Meta desejada</label>
+        <input type="text" id="meta" formControlName="name" (input)="formatCurrency($event)" required placeholder="R$ 0,00">
+      </div>
+    </div>
+  </form>
+  <div class="button-style">
+    <button class="buttom" type="button" (click)="next()">Avançar</button>
+  </div>
+</div>
