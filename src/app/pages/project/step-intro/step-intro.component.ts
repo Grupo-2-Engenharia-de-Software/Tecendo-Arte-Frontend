@@ -37,13 +37,22 @@ export class StepIntroComponent {
 
   formatCurrency(event: Event) {
     const input = event.target as HTMLInputElement;
+    let valorLimpo = input.value.replace(/\D/g, '');
+    let valorNumerico = parseFloat(valorLimpo) / 100;
+    
+    if (isNaN(valorNumerico)) {
+      valorNumerico = 0;
+    }
 
-    let valor = input.value.replace(/[^\d.,]/g, '');
-    valor = valor.replace(',', '.');
-    input.value = valor ? `R$ ${valor}` : '';
+    const formatter = new Intl.NumberFormat('pt-BR', {
+      style: 'currency',
+      currency: 'BRL',
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    });
 
-    const numericValue = parseFloat(valor);
-    this.form.get('meta')?.setValue(isNaN(numericValue) ? '' : numericValue, { emitEvent: false });
+    input.value = formatter.format(valorNumerico);
+    this.form.get('meta')?.setValue(valorNumerico, { emitEvent: false });
   }
 
   next() {

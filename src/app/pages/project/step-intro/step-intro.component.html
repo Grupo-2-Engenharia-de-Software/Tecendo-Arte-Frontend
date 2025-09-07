@@ -24,14 +24,7 @@
       </div>
       <div class="form-row">
         <label for="meta">Meta desejada</label>
-        <input
-          type="text"
-          id="meta"
-          formControlName="meta"
-          required
-          (input)="formatCurrency($event)"
-          placeholder="R$ 0,00"
-        >
+        <input type="text" id="meta" formControlName="name" (input)="formatCurrency($event)" required placeholder="R$ 0,00">
       </div>
     </div>
   </form>
