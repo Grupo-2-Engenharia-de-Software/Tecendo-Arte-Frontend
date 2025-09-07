@@ -17,14 +17,12 @@ html, body {
   background-position: center;
   background-size: cover;
   width: 100%;
-  padding-top: 16.8%; /* 254 / 1512 = 0.168 -> 16.8% */
-  height: 0; /* zera a altura para o padding funcionar */
+  padding-top: 16.8%;
+  height: 0;
 }
 
-/* O restante do código pode ficar como estava antes. */
-
 .retangle {
-  background-color: c.$gray-5;
+  background-color: c.$gray-6;
   max-width: 1294px;
   height: 453px;
   margin: 56px auto;

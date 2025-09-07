@@ -9,6 +9,9 @@ import { RewardInfoComponent } from './pages/project/reward-info/reward-info.com
 import { StepRewardComponent } from './pages/project/step-reward/step-reward.component';
 import { ConfirmComponent } from './pages/project/confirm/confirm.component';
 import { StepImagesComponent } from './pages/project/step-images/step-images.component';
+import { ProfileUserComponent } from './pages/profile-user/profile-user.component';
+import { authGuard } from './services/auth/auth.service';
+
 
 export const routes: Routes = [
     {
@@ -30,6 +33,7 @@ export const routes: Routes = [
   {
     path: 'project',
     component: ProjectLayoutComponent,
+    canActivate: [authGuard],   
     children: [
       { path: 'create', component: StepIntroComponent },
       { path: 'reward', component: StepRewardComponent },
@@ -37,5 +41,9 @@ export const routes: Routes = [
       { path: 'images', component: StepImagesComponent },
       { path: 'created', component: ConfirmComponent },
     ]
+  },{
+    path: 'profile-user',
+    component: ProfileUserComponent,
+    canActivate: [authGuard]
   }
 ];

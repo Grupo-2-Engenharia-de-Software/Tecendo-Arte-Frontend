@@ -14,6 +14,10 @@ import { UsuarioService } from '../../services/usuario/usuario.service';
 })
 export class SignupUserComponent implements OnInit {
   formCadastro!: FormGroup;
+  mensagem: string | null = null;
+  verificado = false;
+  mostrar = false;
+  timeoutRef: any;
 
   constructor(
     private fb: FormBuilder,
@@ -49,7 +53,8 @@ export class SignupUserComponent implements OnInit {
         nome: ['', [Validators.required]],
         email: ['', [Validators.required, Validators.email]],
         senha: ['', [Validators.required, Validators.minLength(8)]],
-        confirmaSenha: ['', [Validators.required]]
+        confirmaSenha: ['', [Validators.required]],
+        tipoConta: ['USUARIO', [Validators.required]]
       }, {
         validators: this.validacaoConfirmaSenha('senha', 'confirmaSenha')
       })
@@ -64,17 +69,44 @@ export class SignupUserComponent implements OnInit {
       nome: this.formCadastro.value.nome,
       email: this.formCadastro.value.email,
       senha: this.formCadastro.value.senha,
-      tipoConta: 'USUARIO'
+      tipoConta: this.formCadastro.value.tipoConta
     }
 
     if(this.formCadastro.valid) {
       this.usuarioService.criarConta(conta).subscribe({
-        next: res => console.log('Essa é a saída:', res),
-        error: err => console.error('Erro:', err)
+        next: res => { 
+          this.exibirMsg('Cadastrado com sucesso!');
+
+          setTimeout( () => {
+            this.irParaLogin();
+          }, 2000)
+        },
+        error: err => this.exibirMsg('Erro: ' + err.error)
       });
     } else {
-      // temporário
-      console.log('Formulário incompleto')
+      this.verificado = true;
+      this.exibirMsg('Preencha todos os campos corretamente.');
     }
+  }
+
+  // Tornar um componente futuramente
+  exibirMsg(mensagem: string) {
+    this.mensagem = mensagem;
+    this.mostrar = true;
+
+    if (this.timeoutRef) {
+      clearTimeout(this.timeoutRef);
+    }
+
+    this.timeoutRef = setTimeout(() => {
+      this.fechar();
+    }, 5000);
+  }
+
+  fechar() {
+    this.mostrar = false;
+    setTimeout(() => {
+      this.mensagem = null;
+    }, 300);
   }
 }

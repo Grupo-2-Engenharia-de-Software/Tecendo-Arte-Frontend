@@ -1,3 +1,10 @@
+<!--Tornar um componente futuramente-->
+@if (mensagem) {
+    <div class="alerta-erro" [class.show]="mostrar">
+      <span>{{ mensagem }}</span>
+      <button class="fechar" (click)="fechar()">X</button>
+    </div>
+}
 
 <div class="cadastroTela">
     <div class="imageSide">
@@ -11,22 +18,28 @@
 
             <div class="cadastroCampos">
                 <label for="nome">Nome</label>
-                <input id="nome" type="text" placeholder="Digite seu nome" formControlName="nome">
+                <input id="nome" type="text" [class.erroCampo]="formCadastro.controls['nome'].invalid && verificado" placeholder="Digite seu nome" formControlName="nome">
             </div>
 
             <div class="cadastroCampos">
                 <label for="email">E-mail</label>
-                <input id="email" type="text" placeholder="Digite seu e-mail" formControlName="email">
+                <input id="email" type="text" [class.erroCampo]="formCadastro.controls['email'].hasError('email') || (formCadastro.controls['email'].invalid && verificado)" placeholder="Digite seu e-mail" formControlName="email">
             </div>
 
             <div class="cadastroCampos">
                 <label for="senha">Senha</label>
-                <input id="senha" type="password" placeholder="Digite sua senha" formControlName="senha">
+                <input id="senha" type="password" [class.erroCampo]="formCadastro.controls['senha'].hasError('minlength') || (formCadastro.controls['senha'].invalid && verificado)" placeholder="Digite sua senha" formControlName="senha">
+
+                @if (formCadastro.controls['senha'].hasError('minlength')) {
+                    <div class="erroMsg">
+                        Senha deve ter no mínimo 8 caracteres
+                    </div>
+                }
             </div>
 
             <div class="cadastroCampos">
                 <label for="confirmaSenha">Confirmar senha</label>
-                <input id="confirmaSenha" type="password" [class.erroCampo]="formCadastro.controls['confirmaSenha'].errors?.['mustMatch']" placeholder="Confirme sua senha" formControlName="confirmaSenha">
+                <input id="confirmaSenha" type="password" [class.erroCampo]="formCadastro.controls['confirmaSenha'].errors?.['mustMatch'] || (formCadastro.controls['confirmaSenha'].invalid && verificado)" placeholder="Confirme sua senha" formControlName="confirmaSenha">
                 
                 @if (
                         formCadastro.controls['confirmaSenha'].dirty && 
@@ -36,6 +49,20 @@
                         As senhas não coincidem
                     </div>
                 }
+            </div>
+
+            <div class="seletorConta">
+                <label>Tipo de Conta:</label>
+                
+                <label>
+                    <input type="radio" formControlName="tipoConta" value="USUARIO" />
+                    Apoiador
+                </label>
+
+                <label>
+                    <input type="radio" formControlName="tipoConta" value="ARTISTA" />
+                    Artista
+                </label>
             </div>
 
             <div class="botoesForm">

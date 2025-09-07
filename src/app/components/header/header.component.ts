@@ -25,4 +25,5 @@ export class HeaderComponent implements OnInit {
   private checkIfHomePage(url: string): void {
     this.isHomePage = url === '/';
   }
+
 }

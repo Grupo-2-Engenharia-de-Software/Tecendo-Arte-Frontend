@@ -29,6 +29,20 @@
           required
         >
 
+        <div class="accountType">
+          <label>Tipo de Conta:</label>
+
+          <label>
+              <input type="radio" [(ngModel)]="loginType" name="loginType" value="USUARIO" />
+              Apoiador
+          </label>
+          
+          <label>
+              <input type="radio" [(ngModel)]="loginType" name="loginType" value="ARTISTA" />
+              Artista
+          </label>
+        </div>
+
         <div class="remember">
           <input type="checkbox" id="remember">
           <label for="remember">Lembrar de mim</label>

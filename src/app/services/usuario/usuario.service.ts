@@ -22,13 +22,25 @@ export interface LoginResponse {
 export class UsuarioService {
   private backend = environment.apiUrl;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   criarConta(conta: any): Observable<any> {
     return this.http.post(`${this.backend}/contas`, conta);
   }
 
-  login(data: LoginRequest): Observable<LoginResponse> {
-    return this.http.post<LoginResponse>(`${this.backend}/usuarios/login`, data);
+  login(data: LoginRequest, type: String): Observable<LoginResponse> {
+    if (type == 'USUARIO') {
+      return this.http.post<LoginResponse>(`${this.backend}/usuarios/login`, data);
+    } else {
+      return this.http.post<LoginResponse>(`${this.backend}/api/artistas/login`, data);
+    }
+  }
+
+  getLoggedUser(): LoginResponse | null {
+    const usuarioJson = localStorage.getItem('usuario');
+    if (usuarioJson) {
+      return JSON.parse(usuarioJson);
+    }
+    return null;
   }
 }
