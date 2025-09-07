@@ -32,7 +32,7 @@ export class LoginComponent {
         localStorage.setItem('usuario', JSON.stringify(response));
 
         if (this.loginType == 'USUARIO') {
-          this.router.navigate(['/']);
+          this.router.navigate(['/profile-user']);
         }
       },
       error: (err: any) => {
