@@ -28,8 +28,12 @@ export class UsuarioService {
     return this.http.post(`${this.backend}/contas`, conta);
   }
 
-  login(data: LoginRequest): Observable<LoginResponse> {
-    return this.http.post<LoginResponse>(`${this.backend}/usuarios/login`, data);
+  login(data: LoginRequest, type: String): Observable<LoginResponse> {
+    if (type == 'USUARIO') {
+      return this.http.post<LoginResponse>(`${this.backend}/usuarios/login`, data);
+    } else {
+      return this.http.post<LoginResponse>(`${this.backend}/api/artistas/login`, data);
+    }
   }
 
   getLoggedUser(): LoginResponse | null {

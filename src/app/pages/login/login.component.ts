@@ -15,6 +15,7 @@ export class LoginComponent {
 
   email: string = '';
   senha: string = '';
+  loginType: string = 'USUARIO';
   message: string = '';
 
   constructor(private usuarioService: UsuarioService,private router: Router) {}
@@ -25,12 +26,14 @@ export class LoginComponent {
       senha: this.senha
     };
 
-    this.usuarioService.login(loginData).subscribe({
+    this.usuarioService.login(loginData, this.loginType).subscribe({
       next: (response: LoginResponse) => {
         localStorage.setItem('token', response.token);
         localStorage.setItem('usuario', JSON.stringify(response));
-        
-        this.router.navigate(['/profile-user']);
+
+        if (this.loginType == 'USUARIO') {
+          this.router.navigate(['/profile-user']);
+        }
       },
       error: (err: any) => {
         this.message = 'E-mail ou senha inválidos.';
