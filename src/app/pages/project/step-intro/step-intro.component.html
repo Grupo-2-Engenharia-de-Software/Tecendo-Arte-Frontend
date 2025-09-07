@@ -14,17 +14,21 @@
         </div>
     </div>
     <div class="form-group">
+      <div class="form-row">
+        <label for="tipoArte">Tipo de arte</label>
+        <select id="tipoArte" formControlName="tipoArte" required>
+          <option *ngFor="let tipo of tiposArte" [value]="tipo">
+            {{ tipo }}
+          </option>
+        </select>
+      </div>
         <div class="form-row">
-            <label for="periodo">Periodo de arrecadação</label>
-            <input type="text" id="periodo" formControlName="periodo" required>
-        </div>
-        <div class="form-row">
-            <label for="meta">Meta desejada</label>
-            <input type="text" id="meta" formControlName="meta" required>
+          <label for="meta">Meta desejada</label>
+          <input type="number" id="meta" formControlName="meta" step="0.01" required>
         </div>
     </div>
   </form>
   <div class="button-style">
-    <button class="buttom" type="buttons" (click)="next()">Avançar</button>
+    <button class="buttom" type="button" (click)="next()">Avançar</button>
   </div>
 </div>

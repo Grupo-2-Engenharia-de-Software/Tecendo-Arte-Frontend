@@ -46,7 +46,8 @@ label {
 }
 
 input[type="text"],
-input[type="file"] {
+input[type="file"],
+select {
   border: none;
   border-bottom: 1px solid c.$pink-1;
   background-color: transparent;

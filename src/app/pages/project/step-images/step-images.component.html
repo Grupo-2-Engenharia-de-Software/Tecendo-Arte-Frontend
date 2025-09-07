@@ -3,19 +3,21 @@
     <h1 class="tittle">Imagens do projeto</h1>
   </div>
   <form [formGroup]="form">
-    <div class="form-group">
-      <div class="form-row">
-        <label for="images">Upload de imagens</label>
-        <input 
-          type="file" 
-          id="images" 
-          formControlName="images" 
-          accept="image/*"
-          multiple>
-      </div>
-      <div class="form-row">
-        <label for="descricao">Descrição das imagens</label>
-        <input type="text" id="descricao" formControlName="descricao" required>
+    <div formArrayName="imagens">
+      <div *ngFor="let imagem of imagens.controls; let i = index" [formGroupName]="i" class="form-group">
+        <div class="form-row">
+          <label for="imagens-{{i}}">Upload da imagem {{i + 1}}</label>
+          <input 
+            type="file" 
+            id="imagens-{{i}}" 
+            formControlName="dadosImagemBase64"
+            (change)="onFileChange($event, i)"
+            accept="image/*">
+        </div>
+        <div class="form-row">
+          <label for="descricao-{{i}}">Descrição da imagem {{i + 1}}</label>
+          <input type="text" id="descricao-{{i}}" formControlName="descricao">
+        </div>
       </div>
     </div>
   </form>
