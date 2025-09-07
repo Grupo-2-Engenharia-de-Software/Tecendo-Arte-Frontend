@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 export interface ProjetoData {
   titulo: string;
   descricaoProjeto: string;
-  meta: number;
+  meta: number | '';
   tipoArte: TipoArte | '';
   imagens?: ImagemRequest[];
 }
@@ -20,7 +20,7 @@ export class ProjetoService {
   private dataSubject = new BehaviorSubject<ProjetoData>({
     titulo: '',
     descricaoProjeto: '',
-    meta: 0,
+    meta: '',
     tipoArte: '',
     imagens: [],
   });

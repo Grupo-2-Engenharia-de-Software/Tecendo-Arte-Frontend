@@ -22,10 +22,17 @@
           </option>
         </select>
       </div>
-        <div class="form-row">
-          <label for="meta">Meta desejada</label>
-          <input type="number" id="meta" formControlName="meta" step="0.01" required>
-        </div>
+      <div class="form-row">
+        <label for="meta">Meta desejada</label>
+        <input
+          type="text"
+          id="meta"
+          formControlName="meta"
+          required
+          (input)="formatCurrency($event)"
+          placeholder="R$ 0,00"
+        >
+      </div>
     </div>
   </form>
   <div class="button-style">

@@ -35,9 +35,19 @@ export class StepIntroComponent {
     }
   }
 
+  formatCurrency(event: Event) {
+    const input = event.target as HTMLInputElement;
+
+    let valor = input.value.replace(/[^\d.,]/g, '');
+    valor = valor.replace(',', '.');
+    input.value = valor ? `R$ ${valor}` : '';
+
+    const numericValue = parseFloat(valor);
+    this.form.get('meta')?.setValue(isNaN(numericValue) ? '' : numericValue, { emitEvent: false });
+  }
+
   next() {
     const formValue = { ...this.form.value };
-    formValue.meta = parseFloat(formValue.meta);
 
     this.projetoService.setData(formValue);
     this.router.navigate(['project/reward']);
