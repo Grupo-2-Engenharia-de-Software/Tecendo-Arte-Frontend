@@ -30,8 +30,10 @@ export class LoginComponent {
       next: (response: LoginResponse) => {
         localStorage.setItem('token', response.token);
         localStorage.setItem('usuario', JSON.stringify(response));
-        
-        this.router.navigate(['/profile-user']);
+
+        if (this.loginType == 'USUARIO') {
+          this.router.navigate(['/profile-user']);
+        }
       },
       error: (err: any) => {
         this.message = 'E-mail ou senha inválidos.';
