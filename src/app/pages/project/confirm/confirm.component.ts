@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ProjectRoutingModule } from "../project-routing.module";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-confirm',
@@ -8,5 +9,12 @@ import { ProjectRoutingModule } from "../project-routing.module";
   styleUrl: './confirm.component.scss'
 })
 export class ConfirmComponent {
+    constructor(private router: Router) {}
+
+  ngOnInit() {
+    setTimeout(() => {
+      this.router.navigate(['/']);
+    }, 2000);
+  }
 
 }
