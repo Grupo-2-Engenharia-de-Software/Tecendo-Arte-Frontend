@@ -1,16 +1,16 @@
 import { Component, Input, OnInit} from '@angular/core';
-import { ProjectResponse } from '../../models/project.interface,';
+import { ProjectResponse } from '../../models/project.interface';
 import { ProgressBarComponent } from '../progress-bar/progress-bar.component';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-card-project',
-  standalone: true, // Adicionei standalone para evitar warnings, caso esteja usando.
+  standalone: true, 
   imports: [ProgressBarComponent, CommonModule],
   templateUrl: './card-project.component.html',
   styleUrl: './card-project.component.scss'
 })
-export class CardProjectComponent implements OnInit { // Implemente a interface OnChanges
+export class CardProjectComponent implements OnInit { 
   @Input() project!: ProjectResponse;
   imageUrl: string = '';
 
