@@ -24,10 +24,15 @@ These instructions will allow you to get a copy of the project running on your l
 ### 📋 Prerequisites
 
 - Make sure you have **Node.js** (LTS version recommended) installed. You can download it from the official **[Node.js website](https://nodejs.org/en/download)**.  
-- This project was generated using **[Angular CLI](https://github.com/angular/angular-cli)** version **19.2.4**.  
-- Install Angular CLI globally by running:  
+- This project was generated using **[Angular CLI](https://github.com/angular/angular-cli)** version **19.2.4**.
+
+Obs: You can install Angular CLI globally using the command below
+
   ```bash
   npm install -g @angular/cli@19.2.4
+  ```
+
+But if you don't want to install it globally, you can proceed to installation and, for the cases which you would use **ng** command you need to put **npx** before
 
 ### 🔧 Installation
 
@@ -44,11 +49,13 @@ git clone https://github.com/Grupo-2-Engenharia-de-Software/Tecendo-Arte-Fronten
 npm install
 ```
 
+3. Create an environment.ts based on environment.template.ts (src/environments) and put the url from backend
+
 ## ▶️ Running the system
 1. Start a local development server by running:
 
 ```bash
-ng serve
+npm start
 ```
 
 2. Once the server is running, open your browser and navigate to:
@@ -99,7 +106,7 @@ ng e2e
 
 ## 📌 Versions
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.4.
+- [0.0.1](https://github.com/Grupo-2-Engenharia-de-Software/Tecendo-Arte-Frontend/tree/56187360006d7f9b1cfdf5154e34f174a3e67b25) - Cadastro de apoiador, artista e projeto, login e perfil de apoiador;
 
 ## 🖌️ UI Designers & Developers
 <table>
@@ -151,8 +158,4 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 ## 📚 Additional Resources
 
 - For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
-
-## 📋 License
-
-- The project uses the GNU General Public License, please refer to the [file](https://github.com/FLuiz22/ufroad-front/blob/main/LICENSE) to learn more.
 
