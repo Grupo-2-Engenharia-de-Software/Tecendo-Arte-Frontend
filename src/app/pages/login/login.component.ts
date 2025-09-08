@@ -33,6 +33,8 @@ export class LoginComponent {
 
         if (this.loginType == 'USUARIO') {
           this.router.navigate(['/profile-user']);
+        } else {
+          this.router.navigate(['/'])
         }
       },
       error: (err: any) => {
