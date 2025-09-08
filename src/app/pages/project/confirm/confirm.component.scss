@@ -1,0 +1,26 @@
+@use '../../../assets/scss/colors.scss' as c;
+
+.content-page {
+  padding-left: 14.53vw;
+  padding-right: 14.53vw;
+  padding-top: 7.87vh;
+  padding-bottom: 5.83vh;
+  display: block;
+  align-items: center;
+  align-content: center;
+}
+
+.tittle {
+  font-weight: normal;
+  font-size: 3.125rem;
+  color: c.$pink-1;
+  text-align: center;
+  padding: 0;
+}
+
+.subtittle {
+  font-size: 2.1875rem;
+  font-weight: normal;
+  text-align: center;
+  padding: 0;
+}

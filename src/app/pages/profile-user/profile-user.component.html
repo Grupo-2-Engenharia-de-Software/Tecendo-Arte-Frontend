@@ -1,0 +1,74 @@
+<app-header></app-header>
+
+<div class="container">
+
+     <div class="box">
+        <img class="background-image" src="../../assets/imgs/profile-user.png" alt="">
+        <img class="profile-photo" src="../../assets/imgs/profile-photo.png" alt="">
+
+        <div class="top-informations">
+            <div class="left">
+                <h1 class="name">{{usuario?.nome}}</h1>
+                <p class="user">&#64;{{usuario?.nome}}</p>
+            </div>
+            <div class="right">
+                <p class="role">Usuário</p>
+                <div class="social-medias">
+                    <img class="media" src="../../assets/icons/X.png" alt="">
+                    <img class="media" src="../../assets/icons/Facebook.png" alt="">
+                    <img class="media" src="../../assets/icons/Instagram.png" alt="">
+                </div>
+            </div>
+           
+           
+        </div>
+         <div class="brown-row"></div>
+
+         <div class="white-box">
+           <div class="box-informations">
+                <div class="box-left">
+                   <div class="field">
+                        <div class="item">
+                            <div class="name-field">
+                                <h1 class="category">Nome: </h1>
+                                <h1 class="name-category">{{usuario?.nome}}</h1>
+                            </div>
+                            <img src="../../assets/icons/Person.png" alt="">
+                        </div>
+                        <div class="brown-row-item"></div>
+                    </div>
+                    <div class="field">
+                        <div class="item">
+                            <div class="name-field">
+                                <h1 class="category">E-mail: </h1>
+                                <h1 class="name-category">{{usuario?.email}}</h1>
+                            </div>
+                            <img src="../../assets/icons/Pencil.png" alt="">
+                        </div>
+                        <div class="brown-row-item"></div>
+                    </div>
+                  
+                     
+                </div>
+                <div class="box-right">
+                    <div class="field">
+                        <div class="item">
+                            <div class="name-field">
+                                <h1 class="category">Senha: </h1>
+                               <h1 class="name-category">*********</h1>
+                            </div>
+                            <img src="../../assets/icons/Password.png" alt="">
+                        </div>
+                        <div class="brown-row-item"></div>
+                    </div>
+                </div>
+           </div>
+
+         </div>
+    </div>
+
+    
+
+</div>
+
+<app-footer></app-footer>

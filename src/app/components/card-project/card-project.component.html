@@ -1,0 +1,24 @@
+<div class="container">
+ <img class="image" [src]="imageUrl" alt="">
+ <section class="informations">
+  <div class="top">
+   <div class="left">
+    <h1 class="title">{{project.titulo}}</h1>
+    <p class="description">{{project.descricaoProjeto}}</p>
+    <div class="tags">
+     <p class="tag">{{project.tipoArte}}</p>
+    </div>
+   </div>
+   <div class="right">
+    <h1 class="author">{{project.nomeArtista}}</h1>
+   </div>
+  </div>
+  <div class="bottom">
+   <div class="progress">
+    <h1 class="end">Data de criação: {{project.dataCriacao | date:'dd/MM/yyyy'}}</h1> 
+    <h1 class="progress-text">{{getPercentage()}}%</h1>
+   </div>
+   <app-progress-bar [progress]="getPercentage()"></app-progress-bar>
+  </div>
+ </section>
+</div>

@@ -1,0 +1,110 @@
+@use '../../assets/scss/colors.scss' as c;
+
+.container {
+
+ app-header {
+    width: 100%;
+    position: absolute;
+    z-index: 100;
+  
+  }
+
+
+  app-footer{
+    width: 100%;
+  }
+  
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: c.$gray-4 ;
+  box-sizing: border-box;
+  overflow-x: hidden;
+
+  .main{
+    flex: 1;
+    width: 100%;
+
+    .imgs{
+      display: flex;
+      flex-direction: row;
+      height: 100vh;
+      width: 100%;
+    
+
+      #img1{
+        width: 20%;
+        z-index: 1;
+      }
+
+      #img2{
+        width: 80%;
+        z-index: 1;
+      }
+
+    }
+    #flower {
+      position: absolute; 
+      top: 25%; 
+      left: 15.5%;
+      z-index: 10; 
+    }
+
+  }
+
+  .projects{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 10rem;
+  
+    background-color: c.$gray-4;
+    justify-content: center;
+    box-sizing: border-box;
+    .first-row{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      .title{
+        color: c.$pink-1;
+        font-size: 2.5rem;
+        font-weight: 300;
+      }
+
+      .see-all{
+        color: c.$pink-1;
+        font-size: 1.3rem;
+        font-weight: 300;
+        text-decoration: underline;
+      }
+    }
+
+    .projects-container{
+      padding: 0rem 3rem;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); 
+      padding-bottom: 4rem;
+      gap: 2rem;
+    }
+
+
+  
+  justify-content: center;
+  
+  margin: 0 auto;
+  margin-top: 2rem;
+  box-sizing: border-box;
+
+  @media(max-width: 1440px){
+    padding: 0rem 5rem;
+  }
+  
+
+  
+  }
+
+  
+}
+

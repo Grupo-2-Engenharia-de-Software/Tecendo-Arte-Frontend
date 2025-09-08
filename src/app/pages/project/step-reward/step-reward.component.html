@@ -1,0 +1,17 @@
+<div class="container">
+  <div>
+    <h1 class="tittle">Informaçoes iniciais</h1>
+  </div>
+  <div class="content-page">
+    <div>
+      <h3 class="subtittle">O projeto terá sistema de recompensa para apoiadores?</h3>
+    </div>
+    <div class="buttom-style">
+      <button class="buttons" (click)="next(true)">Sim</button>
+      <button class="buttons"(click)="next(false)">Não</button>
+    </div>
+  </div>
+  <main class="content">
+    <router-outlet></router-outlet>
+  </main>
+</div>

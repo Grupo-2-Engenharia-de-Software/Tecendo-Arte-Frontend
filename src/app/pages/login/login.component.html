@@ -1,0 +1,63 @@
+<div class="login-container">
+  <div class="login-image">
+    <img src="assets/login.png" alt="Arte de login">
+  </div>
+
+  <div class="login-form">
+    <h1 class="logo">Tecendo <br>Arte</h1>
+    <h2 class="welcome">Bem vindo(a)!</h2>
+
+    <div class="form-fields">
+      <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+        <label for="username">Nome de usuário ou e-mail</label>
+        <input
+          id="username"
+          type="text"
+          placeholder="Digite seu nome de usuário ou e-mail"
+          [(ngModel)]="email"
+          name="email"
+          required
+        >
+
+        <label for="password">Senha</label>
+        <input
+          id="password"
+          type="password"
+          placeholder="Digite sua senha"
+          [(ngModel)]="senha"
+          name="senha"
+          required
+        >
+
+        <div class="accountType">
+          <label>Tipo de Conta:</label>
+
+          <label>
+              <input type="radio" [(ngModel)]="loginType" name="loginType" value="USUARIO" />
+              Apoiador
+          </label>
+          
+          <label>
+              <input type="radio" [(ngModel)]="loginType" name="loginType" value="ARTISTA" />
+              Artista
+          </label>
+        </div>
+
+        <div class="remember">
+          <input type="checkbox" id="remember">
+          <label for="remember">Lembrar de mim</label>
+        </div>
+
+        <div class="buttons">
+          <button type="submit" class="btn-login">Login</button>
+          <a href="/signup" class="btn-create">Criar conta!</a>
+        </div>
+
+        <a href="/forgot-password" class="forgot">Esqueceu a senha?</a>
+      </form>
+
+      <p *ngIf="message" style="text-align:center; color: red;">{{ message }}</p>
+
+    </div>
+  </div>
+</div>

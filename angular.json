@@ -26,19 +26,28 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
+              "src/assets",
               {
                 "glob": "**/*",
-                "input": "public"
+                "input": "src/app/assets",
+                "output": "assets"
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "node_modules/ngx-toastr/toastr.css",
+              "src/app/assets/scss/colors.scss",
+              "src/app/assets/scss/styles.scss"
             ],
             "scripts": [],
             "server": "src/main.server.ts",
             "outputMode": "server",
             "ssr": {
               "entry": "src/server.ts"
+            },
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src"
+              ]
             }
           },
           "configurations": {
@@ -90,13 +99,14 @@
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
             "assets": [
+                "src/assets",
               {
                 "glob": "**/*",
                 "input": "public"
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/app/assets/scss/styles.scss"
             ],
             "scripts": []
           }

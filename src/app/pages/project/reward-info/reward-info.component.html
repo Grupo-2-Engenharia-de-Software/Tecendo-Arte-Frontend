@@ -1,0 +1,25 @@
+<div class="container">
+  <div>
+    <h1 class="tittle">Sistema de recompensa</h1>
+  </div>
+  <form [formGroup]="form">
+    <div class="form-group">
+      <div class="form-row">
+        <label for="descricao">Descrição dos itens</label>
+        <input type="text" id="descricao" formControlName="descricao" required>
+      </div>
+      <div class="form-row">
+        <label for="images">Upload de imagens</label>
+        <input 
+          type="file" 
+          id="images" 
+          formControlName="images" 
+          accept="image/*"
+          multiple>
+      </div>
+    </div>
+  </form>
+  <div class="button-style">
+    <button class="buttom" type="buttons" (click)="next()">Avançar</button>
+  </div>
+</div>
